@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+  <head>
+    <title>How About Fabric?</title>
+    <style>
+
+      body {
+        margin: 0;
+      }
+
+      #c {
+        float: left;
+        width: 540px;
+        height: 540px;
+      }
+
+      h1 {
+        font-family: 'helvetica';
+        font-weight: 'bold';
+        margin-bottom: 45px;
+        font-size: 72pt;
+        float: right;
+        width: 600px;
+        border-bottom: 15px solid black;
+      }
+
+      .canvas-container {
+        float: left;
+      }
+
+      .content-meta {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .work-item p {
+        font-family: helvetica;
+        font-size: 10.5pt;
+        width: 510px;
+      }
+
+      .pendant {
+        position: absolute;
+        top: 0;
+        right: 100px;
+        width: 100px;
+        height: 300px;
+        background-color: #4D9FC2;
+      }
+
+    </style>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.5.0/fabric.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+
+  </head>
+<body>
+
+
+  <div class='content-meta'>
+
+    <div class='art'>
+      <canvas id='c'></canvas>
+    </div>
+
+    <div class='work'>
+      <h1>Seek<br>The Horse</h1>
+
+      <div class='work-item'>
+        <p>Keep on rockin in the free world Keep on rockin in the free world Keep on rockin in the free world v</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  // create a wrapper around native canvas element (with id="c")
+  var canvas = new fabric.Canvas('c');
+
+  $('.art').mouseenter(function () {
+    rect1.animate('angle', '+=5', { onChange: canvas.renderAll.bind(canvas) });
+    rect2.animate('angle', '-=15', { onChange: canvas.renderAll.bind(canvas) });
+    rect3.animate('angle', '+=25', { onChange: canvas.renderAll.bind(canvas) });
+    rect4.animate('angle', '-=50', { onChange: canvas.renderAll.bind(canvas) });
+  });
+
+  $('.art').mouseleave(function () {
+    rect1.animate('angle', '-=5', { onChange: canvas.renderAll.bind(canvas) });
+    rect2.animate('angle', '+=15', { onChange: canvas.renderAll.bind(canvas) });
+    rect3.animate('angle', '-=25', { onChange: canvas.renderAll.bind(canvas) });
+    rect4.animate('angle', '+=50', { onChange: canvas.renderAll.bind(canvas) });
+  });
+
+
+
+
+
+
+  canvas.setHeight(630).setWidth(630);
+  canvas.selection = false;
+
+  // create a rectangle object
+  var rect1 = new fabric.Rect({
+    left: 100,
+    top: 100,
+    fill: '#4D9FC2',
+    width: 400,
+    height: 400
+  }).set('selectable', false)
+  .animate('angle', '-=5', { onChange: canvas.renderAll.bind(canvas) });
+
+  var rect2 = new fabric.Rect({
+    left: 140,
+    top: 160,
+    fill: '#89989F',
+    width: 320,
+    height: 320
+  }).set('selectable', false)
+  .animate('angle', '+=15', { onChange: canvas.renderAll.bind(canvas) });
+
+  var rect3 = new fabric.Rect({
+    left: 180,
+    top: 210,
+    fill: '#ECECDE',
+    width: 240,
+    height: 240
+  }).set('selectable', false)
+  .animate('angle', '-=25', { onChange: canvas.renderAll.bind(canvas) });
+
+  var rect4 = new fabric.Rect({
+    left: 220,
+    top: 260,
+    fill: '#FDC74A',
+    width: 160,
+    height: 160
+  }).set('selectable', false)
+  .animate('angle', '+=50', { onChange: canvas.renderAll.bind(canvas) });
+
+  canvas.add(rect1, rect2, rect3, rect4);
+  canvas.renderAll();
+
+</script>
+
+
+</html>
