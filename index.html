@@ -49,6 +49,12 @@
       @media only screen  and (min-width : 1200px) {
       /* Styles */
 
+        a {
+          display: flex;
+          text-decoration: none;
+          color: black;
+        }
+
         .art {
           width: 33.3%;
         }
@@ -60,15 +66,23 @@
 
         h1 {
           width: 100%;
-          margin-top: 75px;
+          margin-top: 165px;
           margin-bottom: 0;
         }
 
         .work-item-meta {
-          padding-top: 45px;
-          padding-bottom: 45px;
-          border-bottom: 5px solid black;
+          padding-top: 90px;
+          padding-bottom: 90px;
+          border-bottom: 0.5px solid black;
           display: flex;
+        }
+
+        .work-item-meta:nth-child(4) {
+          border-bottom: none;
+        }
+
+        .work-item-meta:nth-child(1) {
+          padding-top: 45px;
         }
 
         .work-item-description {
@@ -111,6 +125,36 @@
           font-family: 'Helvetica';
         }
 
+        .work-item.bike {
+          border-radius: 0;
+        }
+
+        .work-item.kexp {
+          background-color: white;
+          border-radius: 0;
+          width: 0px;
+          height: 0px;
+          border-style: inset;
+          border-width: 0 150px 280px 150px;
+          border-color: transparent transparent black transparent;
+          float: left;
+          transform:rotate(360deg);
+          -ms-transform:rotate(360deg);
+          -moz-transform:rotate(360deg);
+          -webkit-transform:rotate(360deg);
+          -o-transform:rotate(360deg);
+        }
+
+        .work-item.kexp h2 {
+            text-align: center;
+            top: 240px;
+            left: -76px;
+            position: relative;
+            width: 93px;
+            height: 93px;
+            margin: 0px;
+        }
+
       }
 
     </style>
@@ -131,26 +175,44 @@
 
       <div class='work-item-meta'>
 
-        <div class='work-item-description'>
-            <h2>Wedep is a slang genome that works as a sort of Visual Urban Dictionary.</h2>
-            <p class="date-line"></p>
-        </div>
+        <a href='http://wedep.co' target="_blank">
+          <div class='work-item-description'>
+              <h2>Wedep is a slang genome that works as a sort of Visual Urban Dictionary.</h2>
+              <p class="date-line"></p>
+          </div>
 
-        <div class='work-item'>
-          <h2>wedep</h2>
-        </div>
+          <div class='work-item'>
+            <h2>wedep</h2>
+          </div>
+        </a>
 
       </div>
 
       <div class='work-item-meta bike'>
 
-        <div class='work-item-description bike'>
-            <h2>Biking in NYC is kind of hard. This is site aims to make it easier. People share bike routes they've been on and give general biking advice.</h2>
-        </div>
+        <a href='http://bikenyc.herokuapp.com' target="_blank">
+          <div class='work-item-description bike'>
+              <h2>Biking in NYC is kind of hard. This is site aims to make it easier. People share bike routes they've been on and give general biking advice.</h2>
+          </div>
 
-        <div class='work-item bike'>
-          <h2>Bike NYC</h2>
-        </div>
+          <div class='work-item bike'>
+            <h2>Bike NYC</h2>
+          </div>
+        </a>
+
+      </div>
+
+      <div class='work-item-meta kexp'>
+
+        <a href='http://blog.kexp.org/author/mbeswetherick/' target="_blank">
+          <div class='work-item-description kexp'>
+              <h2>I used to work at Seattle's KEXP radio station. I would write down stuff for the DJs to say and sometimes they would say it. I also wrote for their blog. Here is everything I wrote for them.</h2>
+          </div>
+
+          <div class='work-item kexp'>
+            <h2>KEXP</h2>
+          </div>
+        </a>
 
       </div>
 
