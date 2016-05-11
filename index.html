@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Michael Beswetherick</title>
+    <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
     <style>
 
       body {
@@ -19,13 +20,8 @@
         font-weight: 'bold';
         margin-bottom: 15px;
         font-size: 72pt;
-        float: right;
         width: 645px;
         border-bottom: 15px solid black;
-      }
-
-      .canvas-container {
-        float: left;
       }
 
       .content-meta {
@@ -52,16 +48,67 @@
       /* Desktops and laptops ----------- */
       @media only screen  and (min-width : 1200px) {
       /* Styles */
+
+        .art {
+          width: 33.3%;
+        }
+
         .work {
-          width: 100%;
+          margin-left: auto;
+          width: 66.6%;
         }
 
         h1 {
           width: 100%;
+          margin-top: 75px;
+          margin-bottom: 0;
         }
 
-        .work-item p {
-          width: 590px;
+        .work-item-meta {
+          padding-top: 45px;
+          padding-bottom: 45px;
+          border-bottom: 5px solid black;
+          display: flex;
+        }
+
+        .work-item-description {
+          flex-direction: column;
+          width: 53%;
+          text-align: right;
+          align-self: center;
+          font-family: 'Helvetica';
+          font-weight: 100;
+          padding-right: 45px;
+          font-size: 17pt;
+          line-height: 26pt;
+        }
+
+        .work-item-description h2 {
+          font-family: 'Helvetica';
+          font-weight: 100;
+          padding-right: 15px;
+          font-size: 17pt;
+        }
+
+        .work-item {
+          height: 300px;
+          width: 300px;
+          display: flex;
+          align-items: center;
+          background-color: black;
+          border-radius: 50%;
+        }
+
+        .work-item h2 {
+          font-family: "Armata", 'Helvetica';
+          font-size: 44.4pt;
+          margin-left: auto;
+          margin-right: auto;
+          color: white;
+        }
+
+        .work-item.bike h2 {
+          font-family: 'Helvetica';
         }
 
       }
@@ -78,86 +125,39 @@
 
   <div class='content-meta'>
 
-    <div class='art'>
-      <canvas id='c'></canvas>
-    </div>
 
     <div class='work'>
       <h1>Michael<br>Beswetherick</h1>
 
-      <div class='work-item'>
+      <div class='work-item-meta'>
+
+        <div class='work-item-description'>
+            <h2>Wedep is a slang genome that works as a sort of Visual Urban Dictionary.</h2>
+            <p class="date-line"></p>
+        </div>
+
+        <div class='work-item'>
+          <h2>wedep</h2>
+        </div>
+
       </div>
+
+      <div class='work-item-meta bike'>
+
+        <div class='work-item-description bike'>
+            <h2>Biking in NYC is kind of hard. This is site aims to make it easier. People share bike routes they've been on and give general biking advice.</h2>
+        </div>
+
+        <div class='work-item bike'>
+          <h2>Bike NYC</h2>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </body>
 
-<script>
-  // create a wrapper around native canvas element (with id="c")
-  var canvas = new fabric.Canvas('c');
-
-  $('.art').mouseenter(function () {
-    rect1.animate('angle', '+=5', { onChange: canvas.renderAll.bind(canvas) });
-    rect2.animate('angle', '-=15', { onChange: canvas.renderAll.bind(canvas) });
-    rect3.animate('angle', '+=25', { onChange: canvas.renderAll.bind(canvas) });
-    rect4.animate('angle', '-=50', { onChange: canvas.renderAll.bind(canvas) });
-  });
-
-  $('.art').mouseleave(function () {
-    rect1.animate('angle', '-=5', { onChange: canvas.renderAll.bind(canvas) });
-    rect2.animate('angle', '+=15', { onChange: canvas.renderAll.bind(canvas) });
-    rect3.animate('angle', '-=25', { onChange: canvas.renderAll.bind(canvas) });
-    rect4.animate('angle', '+=50', { onChange: canvas.renderAll.bind(canvas) });
-  });
-
-
-
-
-
-
-  canvas.setHeight(630).setWidth(630);
-  canvas.selection = false;
-
-  // create a rectangle object
-  var rect1 = new fabric.Rect({
-    left: 100,
-    top: 100,
-    fill: '#4D9FC2',
-    width: 400,
-    height: 400
-  }).set('selectable', false)
-  .animate('angle', '-=5', { onChange: canvas.renderAll.bind(canvas) });
-
-  var rect2 = new fabric.Rect({
-    left: 140,
-    top: 160,
-    fill: '#89989F',
-    width: 320,
-    height: 320
-  }).set('selectable', false)
-  .animate('angle', '+=15', { onChange: canvas.renderAll.bind(canvas) });
-
-  var rect3 = new fabric.Rect({
-    left: 180,
-    top: 210,
-    fill: '#ECECDE',
-    width: 240,
-    height: 240
-  }).set('selectable', false)
-  .animate('angle', '-=25', { onChange: canvas.renderAll.bind(canvas) });
-
-  var rect4 = new fabric.Rect({
-    left: 220,
-    top: 260,
-    fill: '#FDC74A',
-    width: 160,
-    height: 160
-  }).set('selectable', false)
-  .animate('angle', '+=50', { onChange: canvas.renderAll.bind(canvas) });
-
-  canvas.add(rect1, rect2, rect3, rect4);
-  canvas.renderAll();
-
-</script>
 
 
 </html>
