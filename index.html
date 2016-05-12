@@ -19,7 +19,7 @@
 
       a {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         text-decoration: none;
         color: black;
       }
@@ -79,7 +79,6 @@
         height: 300px;
         width: 300px;
         display: flex;
-        flex-shrink: 0;
         align-items: center;
         background-color: black;
         border-radius: 50%;
@@ -138,7 +137,7 @@
       }
 
       /* Desktops and laptops ----------- */
-      @media (min-width : 768px) {
+      @media screen and (min-width : 768px) {
       /* Styles */
 
         a {
@@ -268,7 +267,7 @@
       }
 
       /* Desktops and laptops ----------- */
-      @media (min-width : 1200px) {
+      @media screen (min-width : 1200px) {
       /* Styles */
         .work {
           margin-left: auto;
