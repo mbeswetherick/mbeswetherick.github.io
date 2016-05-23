@@ -165,6 +165,19 @@
       .work-item-meta.kexp:hover .kexp-description {
         border-bottom: 0.5px black solid;
       }
+
+      .work-item-meta.wedep p,
+      .work-item-meta.bike p,
+      .work-item-meta.kexp p {
+        opacity: 0;
+        transition: all 0.05s ease-in-out;
+      }
+
+      .work-item-meta.wedep:hover p,
+      .work-item-meta.bike:hover p,
+      .work-item-meta.kexp:hover p {
+        opacity: 1;
+      }
     }
 
       /* Desktops and laptops ----------- */
@@ -178,6 +191,7 @@
           flex-direction: row;
           text-decoration: none;
           color: black;
+          width: 100%;
         }
 
         .art {
@@ -306,11 +320,11 @@
       }
 
       /* Desktops and laptops ----------- */
-      @media screen and (min-width : 999200px) {
+      @media screen and (min-width : 1500px) {
       /* Styles */
         .work {
           margin-left: auto;
-          width: 72%;
+          width: 1300px;
           margin-right: 0;
         }
 
@@ -337,6 +351,7 @@
         <a href='http://wedep.co' target="_blank">
           <div class='work-item-description'>
               <h2 class='wedep-description'>Wedep is a slang genome that works as a sort of Visual Urban Dictionary.</h2>
+              <p><em>PRO TIP: Load on browse can be slow, but just wait a sec</em></p>
               <p class="date-line"></p>
           </div>
 
@@ -352,6 +367,7 @@
         <a href='http://bikenyc.herokuapp.com' target="_blank">
           <div class='work-item-description bike'>
               <h2 class='bike-description'>Biking in NYC is kind of hard. This site aims to make it easier. People share bike routes they've been on and give general biking advice.</h2>
+              <p><em>The data is all wacked out right now, but give it a shot and only go from brooklyn to Manhattan :^)</em></p>
           </div>
 
           <div class='work-item bike'>
