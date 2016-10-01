@@ -66,10 +66,6 @@
         display:-webkit-flex;
       }
 
-      .work-item-meta:nth-child(4) {
-        border-bottom: none;
-      }
-
       .work-item-meta:nth-child(1) {
         padding-top: 45px;
       }
@@ -126,6 +122,10 @@
         font-family: 'helvetica neue', 'helvetica', arial;
       }
 
+      .work-item.posters h2 {
+        font-family: 'helvetica neue', 'helvetica', arial;
+      }
+
       .work-item.bike {
         border-radius: 0;
       }
@@ -136,7 +136,8 @@
 
       .work-item-meta.wedep:hover .wedep-description,
       .work-item-meta.bike:hover .bike-description,
-      .work-item-meta.kexp:hover .kexp-description {
+      .work-item-meta.kexp:hover .kexp-description,
+      .work-item-meta.posters:hover .posters-description {
         border-bottom: 0.5px black solid;
       }
 
@@ -195,7 +196,7 @@
           margin-right: 0;
         }
 
-        .work-item-meta:nth-child(4) {
+        .work-item-meta:nth-child(5) {
           border-bottom: none;
         }
 
@@ -335,6 +336,20 @@
 
           <div class='work-item kexp'>
             <h2>KEXP</h2>
+          </div>
+        </a>
+
+      </div>
+
+      <div class='work-item-meta posters'>
+
+        <a href='posters.html' target="_blank">
+          <div class='work-item-description posters'>
+              <h2 class='posters-description'>Here are some posters I have designed. I think they're fun, but you be the judge.</h2>
+          </div>
+
+          <div class='work-item posters'>
+            <h2>Posters!</h2>
           </div>
         </a>
 
