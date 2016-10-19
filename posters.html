@@ -20,19 +20,7 @@
         margin: 0;
         background-color: #f3f3f3;
         -webkit-font-smoothing: antialiased;
-      }
-
-      h2 {
         font-family: 'helvetica neue', 'helvetica', arial;
-        font-weight: 'bold';
-        margin-bottom: 15px;
-        font-size: 27.5pt;
-        width: 88%;
-        max-width: 88%;
-
-        margin-top: auto;
-        margin-right: auto;
-        margin-left: auto;
       }
 
       .content-meta {
@@ -53,7 +41,31 @@
       .piece {
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
+        height: 100vh;
+        min-height: 950px;
+      }
+
+      h2 {
+        font-weight: 'bold';
+        margin-bottom: 15px;
+        font-size: 27.5pt;
+        width: 88%;
+        max-width: 88%;
+
+        margin-top: auto;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .piece-description {
+        width: 88%;
+        max-width: 88%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+
+        font-size: 17pt;
+        line-height: 23pt;
       }
 
     /* Desktops and laptops ----------- */
@@ -71,10 +83,17 @@
         margin-right: auto;
       }
 
-      .media {
-        height: 66vh;
+      .piece {
+        min-height: 1140px;
       }
 
+      .media {
+      }
+
+      .piece-description {
+        margin-left: 0;
+        margin-right: 0;
+      }
 
     }
 
@@ -95,6 +114,7 @@
 
     <div class='piece'>
       <h2>Max &amp; Ronan - Album Cover</h2>
+      <p class='piece-description'>Album cover I did for a friend. Ronan has a beard and Max wears glasses.</p>
       <div class='media'>
         <img src='images/ronan_mask.png' />
       </div>
@@ -102,20 +122,15 @@
 
     <div class='piece'>
       <h2>Poster for The University of Washington's Rainy Dawg Radio</h2>
+      <p class='piece-description'>Rainy Dawg Radio is UW's student run radio station. I thought a tic-tac toe game with <strong>RDR</strong> instead of <strong>RRR</strong> or <strong>DDD</strong> worked well.</p>
       <div class='media'>
         <img src='images/rainy1.png' />
       </div>
     </div>
 
     <div class='piece'>
-      <h2>Pre-release Material for Lady The Beard's Chall Menagerie</h2>
-      <div class='media'>
-        <img src='images/fuck.png' />
-      </div>
-    </div>
-
-    <div class='piece'>
       <h2>The Bill Buxton Cruise</h2>
+      <p class='piece-description'>A fake poster for a fake cruise. Bill Buxton is a researcher at Microsoft Research. He would likely prototype on the beach.</p>
       <div class='media'>
         <img src='images/buxtonBeach.png' />
       </div>
@@ -123,6 +138,7 @@
 
     <div class='piece'>
       <h2>Git Music Ad</h2>
+      <p class='piece-description'>Appropriating The Velvet Underground for a school project. Git Music was a git client for music software.</p>
       <div class='media'>
         <img src='images/warhol.png' />
       </div>
