@@ -1,0 +1,38 @@
+h1 {
+  color: pink;
+  background-color: darkseagreen;
+}
+
+p {
+  color: purple;
+  background-color: orangered;
+}
+
+
+.mike-headline {
+  color: gainsboro;
+  background-color: lightcoral;
+}
+
+.mike-paragraph {
+  color: aqua;
+  background-color: hotpink;
+}
+
+.ashley-container {
+  width: 60%;
+  transform: rotateY(0132deg) rotateX(187deg);
+  transition: all 5s ease-in-out;
+}
+
+.mike-container {
+  width: 40%;
+  transform: rotateY(50deg);
+}
+
+.big-box {
+  display: flex;
+  margin-left: auto;
+  width: 1000px;
+  perspective: 1000px;
+}
