@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: wheat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.key {
+  width: 100vw;
+  height: 14.285vh;
+}
+
+.key-1 {
+  background-color: #121212;
+}
+
+.key-2 {
+  background-color: #444;
+}
+
+.key-3 {
+  background-color: #555;
+}
+
+.key-4 {
+  background-color: #666;
+}
+
+.key-5 {
+  background-color: #888;
+}
+
+.key-6 {
+  background-color: #999;
+}
+
+.key-7 {
+  background-color: #b3b3b3;
+}
+
+
+@media (min-width : 768px) {
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .key {
+    height: 100vh;
+    width: 14.285vw;
+  }
+}
