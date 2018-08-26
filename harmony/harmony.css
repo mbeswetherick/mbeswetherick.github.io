@@ -13,11 +13,17 @@ body {
 .key {
   width: 100vw;
   height: 14.285vh;
+  transition: background-color 0.2s ease-in;
 }
 
 .key-1 {
   background-color: #121212;
 }
+
+.key-1.playing {
+  background-color: #9fe3f7;
+}
+
 
 .key-2 {
   background-color: #444;
@@ -37,6 +43,10 @@ body {
 
 .key-6 {
   background-color: #999;
+}
+
+.key-6.playing {
+  background-color: #fbc0dc;
 }
 
 .key-7 {

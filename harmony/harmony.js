@@ -1,10 +1,13 @@
 const handleNoteClick = function () {
   const keyNumber = this.id;
   const key = document.getElementById(`key${keyNumber}`);
+  const keyWrapper = document.getElementById(keyNumber);
   if (key.paused) {
     key.play();
+    keyWrapper.classList.add('playing');
   } else {
     key.pause();
+    keyWrapper.classList.remove('playing');
   }
 };
 
