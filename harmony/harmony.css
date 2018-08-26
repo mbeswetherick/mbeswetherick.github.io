@@ -23,6 +23,7 @@ body {
   font-size: 16pt;
   font-weight: 800;
   padding-top: 0;
+  margin-top: 15px;
 }
 
 .description {
@@ -39,8 +40,8 @@ body {
   background: wheat;
   position: absolute;
   cursor: move;
-  top: 30px;
-  left: 100px;
+  top: 334px;
+  left: 809px;
 }
 
 .wrapper {
