@@ -11,7 +11,7 @@ const handleNoteClick = function () {
   }
 };
 
-const KEY_NUMS = [1, 2, 3, 4, 5, 6, 7];
+const KEY_NUMS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 
 document.addEventListener("DOMContentLoaded", function(event) { 
