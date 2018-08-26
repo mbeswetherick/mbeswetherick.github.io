@@ -6,12 +6,49 @@ body {
   height: 0;
 }
 
+.title, .description {
+  display: inline-block;
+  text-align: left;
+  font-family: 'Assistant';
+  font-weight: 800;
+  /* font-style: italic; */
+  width: 60%;
+  margin-left: 15px;
+  padding-top: 0px;
+  font-size: 16pt;
+  border-top: 1px solid black;
+}
+
+.title {
+  font-size: 16pt;
+  font-weight: 800;
+  padding-top: 0;
+}
+
+.description {
+  font-size: 9pt;
+  font-weight: 800;
+  margin-top: 0;
+  padding-top: 5px;
+}
+
+.info {
+  width: 218px;
+  height: 248px;
+  border-radius: 1px;
+  background: wheat;
+  position: absolute;
+  cursor: move;
+  top: 30px;
+  left: 100px;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   background-color: wheat;
   width: 100vw;
-  height: 200vh;
+  height: 300vh;
 }
 
 .key {
@@ -20,48 +57,67 @@ body {
   transition: background-color 0.2s ease-in;
 }
 
-.key-1, .key-8 {
+.key-1, .key-8, .key-15 {
   background-color: #121212;
 }
 
-.key-1.playing {
+.key-1.playing, .key-8.playing, .key-15.playing {
   background-color: #C92A2A;
 }
 
-
-.key-2, .key-9 {
+.key-2, .key-9, .key-16 {
   background-color: #444;
 }
 
-.key-3, .key-10 {
+.key-2.playing, .key-9.playing, .key-16.playing {
+  background-color: #4d2a8e;
+}
+
+.key-3, .key-10, .key-17 {
   background-color: #555;
 }
 
-.key-4, .key-11 {
+.key-3.playing, .key-10.playing, .key-17.playing {
+  background-color: #fafb3d;
+}
+
+.key-4, .key-11, .key-18 {
   background-color: #666;
 }
 
-.key-5, .key-12 {
+.key-4.playing, .key-11.playing, .key-18.playing {
+  background-color: #f87825;
+}
+
+.key-5, .key-12, .key-19 {
   background-color: #888;
 }
 
-.key-6, .key-13 {
+.key-5.playing, .key-12.playing, .key-19.playing {
+  background-color: #56b4ac;
+}
+
+.key-6, .key-13, .key-20 {
   background-color: #999;
 }
 
-.key-6.playing {
+.key-6.playing, .key-13.playing, .key-20.playing {
   background-color: #fbc0dc;
 }
 
-.key-7, .key-14 {
+.key-7, .key-14, .key-21 {
   background-color: #b3b3b3;
+}
+
+.key-7.playing, .key-14.playing, .key-21.playing {
+  background-color: #f1faeb;
 }
 
 
 @media (min-width : 768px) {
   .wrapper {
     flex-direction: row;
-    width: 200vw;
+    width: 300vw;
     height: 100vh;
   }
 
