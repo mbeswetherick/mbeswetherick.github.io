@@ -2,12 +2,16 @@ body {
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  height: 0;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   background-color: wheat;
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
 }
 
 .key {
@@ -16,32 +20,32 @@ body {
   transition: background-color 0.2s ease-in;
 }
 
-.key-1 {
+.key-1, .key-8 {
   background-color: #121212;
 }
 
 .key-1.playing {
-  background-color: #9fe3f7;
+  background-color: #C92A2A;
 }
 
 
-.key-2 {
+.key-2, .key-9 {
   background-color: #444;
 }
 
-.key-3 {
+.key-3, .key-10 {
   background-color: #555;
 }
 
-.key-4 {
+.key-4, .key-11 {
   background-color: #666;
 }
 
-.key-5 {
+.key-5, .key-12 {
   background-color: #888;
 }
 
-.key-6 {
+.key-6, .key-13 {
   background-color: #999;
 }
 
@@ -49,7 +53,7 @@ body {
   background-color: #fbc0dc;
 }
 
-.key-7 {
+.key-7, .key-14 {
   background-color: #b3b3b3;
 }
 
@@ -57,6 +61,8 @@ body {
 @media (min-width : 768px) {
   .wrapper {
     flex-direction: row;
+    width: 200vw;
+    height: 100vh;
   }
 
   .key {
