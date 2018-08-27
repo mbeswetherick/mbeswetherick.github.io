@@ -40,8 +40,7 @@ body {
 }
 
 .note-box {
-  padding: 8px;
-  background: #C92A2A;
+  padding: 10px;
   color: #eee;
   transition: all 0.2s ease-in-out;
   opacity: 0;

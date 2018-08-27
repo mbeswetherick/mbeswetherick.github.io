@@ -1,6 +1,38 @@
+const F = [
+  {
+    name: 'F1',
+    color: '#C92A2A',
+  },
+  {
+    name: 'G1',
+    color: '#4d2a8e',
+  },
+  {
+    name: 'A1',
+    color: '#fafb3d',
+  },
+  {
+    name: 'Bb1',
+    color: '#f87825',
+  },
+  {
+    name: 'C1',
+    color: '#56b4ac',
+  },
+  {
+    name: 'D1',
+    color: '#fbc0dc',
+  },
+  {
+    name: 'E1',
+    color: '#f1faeb',
+  },
+];
+
 handleKeyPlay = function (keyNum) {
   const keyBox = document.createElement('div');
-  keyBox.innerHTML = 'C1';
+  keyBox.innerHTML = F[keyNum - 1].name;
+  keyBox.style.background = F[keyNum - 1].color;
   keyBox.className = 'note-box';
   keyBox.id = 'note-box' + keyNum;
   document.getElementById('note-holder').appendChild(keyBox);
