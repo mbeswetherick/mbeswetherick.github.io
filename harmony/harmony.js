@@ -1,3 +1,25 @@
+handleKeyPlay = function (keyNum) {
+  const keyBox = document.createElement('div');
+  keyBox.innerHTML = 'C1';
+  keyBox.className = 'note-box';
+  keyBox.id = 'note-box' + keyNum;
+  document.getElementById('note-holder').appendChild(keyBox);
+  window.setTimeout(function() {
+    keyBox.style.opacity = '1';
+  }, 100)
+  //keyBox.style.opacity = '1';
+};
+
+handleKeyPause = function (keyNum) {
+  
+  const keyBox = document.getElementById('note-box' + keyNum);
+  keyBox.style.opacity = 0;
+
+  window.setTimeout(function() {
+    keyBox.parentNode.removeChild(keyBox);
+  }, 100);
+};
+
 const handleNoteClick = function () {
   const keyNumber = this.id;
   const key = document.getElementById(`key${keyNumber}`);
@@ -5,9 +27,11 @@ const handleNoteClick = function () {
   if (key.paused) {
     key.play();
     keyWrapper.classList.add('playing');
+    handleKeyPlay(keyNumber);
   } else {
     key.pause();
     keyWrapper.classList.remove('playing');
+    handleKeyPause(keyNumber);
   }
 };
 

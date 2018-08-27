@@ -6,7 +6,7 @@ body {
   height: 0;
 }
 
-.title, .description {
+.title, .description, .note-holder {
   display: inline-block;
   text-align: left;
   font-family: 'Assistant', 'Helvetica Neue';
@@ -26,12 +26,25 @@ body {
   margin-top: 15px;
 }
 
-.description {
+.description, .note-holder {
   font-size: 10pt;
   line-height: 14pt;
-  font-weight: 800;
+  font-weight: 700;
   margin-top: 0;
   padding-top: 5px;
+}
+
+.note-holder {
+  display: flex;
+  flex-direction: row;
+}
+
+.note-box {
+  padding: 8px;
+  background: #C92A2A;
+  color: #eee;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
 }
 
 .info {
