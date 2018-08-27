@@ -9,25 +9,26 @@ body {
 .title, .description {
   display: inline-block;
   text-align: left;
-  font-family: 'Assistant';
-  font-weight: 800;
+  font-family: 'Assistant', 'Helvetica Neue';
+  font-weight: 700;
   /* font-style: italic; */
-  width: 60%;
+  width: 69%;
   margin-left: 15px;
-  padding-top: 0px;
+  padding-top: 0;
   font-size: 16pt;
   border-top: 1px solid black;
 }
 
 .title {
-  font-size: 16pt;
+  font-size: 12pt;
   font-weight: 800;
-  padding-top: 0;
+  padding-top: 3px;
   margin-top: 15px;
 }
 
 .description {
-  font-size: 9pt;
+  font-size: 10pt;
+  line-height: 14pt;
   font-weight: 800;
   margin-top: 0;
   padding-top: 5px;
@@ -37,7 +38,7 @@ body {
   width: 218px;
   height: 248px;
   border-radius: 1px;
-  background: wheat;
+  background: #fff6e5;
   position: absolute;
   cursor: move;
   top: 334px;
@@ -56,6 +57,7 @@ body {
   width: 100vw;
   height: 14.285vh;
   transition: background-color 0.2s ease-in;
+  cursor: pointer;
 }
 
 .key-1, .key-8, .key-15 {
