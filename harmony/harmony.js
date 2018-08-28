@@ -34,6 +34,41 @@ const F = [
     color: '#f1faeb',
     interval: 6,
   },
+  {
+    name: 'F2',
+    color: '#C92A2A',
+    interval: 7,
+  },
+  {
+    name: 'G2',
+    color: '#4d2a8e',
+    interval: 8,
+  },
+  {
+    name: 'A2',
+    color: '#fafb3d',
+    interval: 9,
+  },
+  {
+    name: 'Bb2',
+    color: '#f87825',
+    interval: 10,
+  },
+  {
+    name: 'C2',
+    color: '#56b4ac',
+    interval: 11,
+  },
+  {
+    name: 'D2',
+    color: '#fbc0dc',
+    interval: 12,
+  },
+  {
+    name: 'E2',
+    color: '#f1faeb',
+    interval: 13,
+  },
 ];
 
 
