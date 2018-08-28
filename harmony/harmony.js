@@ -2,40 +2,75 @@ const F = [
   {
     name: 'F1',
     color: '#C92A2A',
+    interval: 0,
   },
   {
     name: 'G1',
     color: '#4d2a8e',
+    interval: 1,
   },
   {
     name: 'A1',
     color: '#fafb3d',
+    interval: 2,
   },
   {
     name: 'Bb1',
     color: '#f87825',
+    interval: 3,
   },
   {
     name: 'C1',
     color: '#56b4ac',
+    interval: 4,
   },
   {
     name: 'D1',
     color: '#fbc0dc',
+    interval: 5,
   },
   {
     name: 'E1',
     color: '#f1faeb',
+    interval: 6,
   },
 ];
 
+
+
 handleKeyPlay = function (keyNum) {
   const keyBox = document.createElement('div');
+  const currentInterval = F[keyNum - 1].interval;
+  keyBox.dataset.interval = currentInterval;
   keyBox.innerHTML = F[keyNum - 1].name;
   keyBox.style.background = F[keyNum - 1].color;
   keyBox.className = 'note-box';
   keyBox.id = 'note-box' + keyNum;
-  document.getElementById('note-holder').appendChild(keyBox);
+
+  const noteHolder = document.getElementById('note-holder');
+
+  //parentElement.insertBefore(newElement, parentElement.children[2]);
+  let indexToAppend = 0;
+  if (noteHolder.children.length) {
+    console.log('trying to append at correct spot')
+    for (let i = 0; i < noteHolder.children.length; i += 1) {
+      if (parseInt(noteHolder.children[i].dataset.interval, 10) >= currentInterval) {
+        indexToAppend = i;
+      }
+    }
+    if (indexToAppend === 0) {
+      document.getElementById('note-holder').appendChild(keyBox);
+    } else {
+      noteHolder.insertBefore(keyBox, noteHolder.children[indexToAppend]);
+    }
+  } else {
+    console.log('just appending bro')
+    document.getElementById('note-holder').appendChild(keyBox);
+  }
+  
+
+
+
   window.setTimeout(function() {
     keyBox.style.opacity = '1';
   }, 100)
