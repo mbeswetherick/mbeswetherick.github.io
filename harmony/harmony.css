@@ -12,49 +12,66 @@ body {
   font-family: 'Assistant', 'Helvetica Neue';
   font-weight: 700;
   /* font-style: italic; */
-  width: 69%;
+  width: 86%;
   margin-left: 15px;
   padding-top: 0;
   font-size: 16pt;
-  border-top: 1px solid black;
 }
 
 .title {
   font-size: 12pt;
   font-weight: 800;
   padding-top: 3px;
-  margin-top: 15px;
+  margin-top: 12px;
+  margin-bottom: 3px;
 }
 
 .description, .note-holder {
-  font-size: 10pt;
+  font-size: 8pt;
   line-height: 14pt;
   font-weight: 700;
   margin-top: 0;
   padding-top: 5px;
+  margin-bottom: 19px;
 }
 
 .note-holder {
   display: flex;
   flex-direction: row;
+  font-size: 11pt;
+  margin-left: 0;
+  padding-top: 0;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
 }
 
 .note-box {
-  padding: 10px;
+  padding: 20px;
   color: #eee;
   transition: all 0.2s ease-in-out;
   opacity: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .info {
   width: 218px;
-  height: 248px;
+  height: 269px;
   border-radius: 1px;
   background: #fff6e5;
   position: absolute;
   cursor: move;
   top: 334px;
   left: 809px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-holder {
+  background: wheat;
+  flex-direction: column;
+  margin-top: auto;
 }
 
 .wrapper {
