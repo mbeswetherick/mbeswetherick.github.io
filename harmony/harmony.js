@@ -1,42 +1,42 @@
 const F = [
   {
     name: 'F1',
-    color: '#C92A2A',
+    color: '#1e305f',
     interval: 0,
   },
   {
     name: 'G1',
-    color: '#4d2a8e',
+    color: '#253d79',
     interval: 1,
   },
   {
     name: 'A1',
-    color: '#fafb3d',
+    color: '#2d488e',
     interval: 2,
   },
   {
     name: 'Bb1',
-    color: '#f87825',
+    color: '#3452a0',
     interval: 3,
   },
   {
     name: 'C1',
-    color: '#56b4ac',
+    color: '#3f61b7',
     interval: 4,
   },
   {
     name: 'D1',
-    color: '#fbc0dc',
+    color: '#4d6dc7',
     interval: 5,
   },
   {
     name: 'E1',
-    color: '#f1faeb',
+    color: '#5f7fd8',
     interval: 6,
   },
   {
     name: 'F2',
-    color: '#C92A2A',
+    color: '#3e0c0e',
     interval: 7,
   },
   {

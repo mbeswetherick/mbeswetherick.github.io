@@ -89,12 +89,105 @@ body {
   cursor: pointer;
 }
 
+.key-1 {
+  background-color: #272324;
+}
+
+.key-1.playing {
+  background-color: #1e305f;
+}
+
+.key-2 {
+  background-color: #332f30;
+}
+
+.key-3 {
+  background-color: #3c3839;
+}
+
+.key-4 {
+  background-color: #474445;
+}
+
+.key-5 {
+  background-color: #524e4f;
+}
+
+.key-6 {
+  background-color: #5c595a;
+}
+
+.key-7 {
+  background-color: #666464;
+}
+
+.key-8 {
+  background-color: #716e6f;
+}
+
+.key-9 {
+  background-color: #7d7a7b;
+}
+
+.key-10 {
+  background-color: #878585;
+}
+
+.key-11 {
+  background-color: #918f90;
+}
+
+.key-12 {
+  background-color: #9b999a;
+}
+
+.key-13 {
+  background-color: #a6a5a5;
+}
+
+.key-14 {
+  background-color: #b0afaf;
+}
+
+.key-15 {
+  background-color: #bbbaba;
+}
+
+.key-16 {
+  background-color: #c5c4c4;
+}
+
+.key-17 {
+  background-color: #d0cfcf;
+}
+
+.key-18 {
+  background-color: #dad9d9;
+}
+
+.key-19 {
+  background-color: #e5e5e5;
+}
+
+.key-20 {
+  background-color: #efefef;
+}
+
+.key-21 {
+  background-color: #fcfbfc;
+}
+
+/*
 .key-1, .key-8, .key-15 {
-  background-color: #121212;
+  background-color: #333;
 }
 
 .key-1.playing, .key-8.playing, .key-15.playing {
-  background-color: #C92A2A;
+  background-color: #1e305f;
+}
+
+.key-8.playing {
+  background: #3e0c0e;
 }
 
 .key-2, .key-9, .key-16 {
@@ -102,7 +195,7 @@ body {
 }
 
 .key-2.playing, .key-9.playing, .key-16.playing {
-  background-color: #4d2a8e;
+  background-color: #253d79;
 }
 
 .key-3, .key-10, .key-17 {
@@ -110,7 +203,7 @@ body {
 }
 
 .key-3.playing, .key-10.playing, .key-17.playing {
-  background-color: #fafb3d;
+  background-color: #2d488e;
 }
 
 .key-4, .key-11, .key-18 {
@@ -118,7 +211,7 @@ body {
 }
 
 .key-4.playing, .key-11.playing, .key-18.playing {
-  background-color: #f87825;
+  background-color: #3452a0;
 }
 
 .key-5, .key-12, .key-19 {
@@ -126,7 +219,7 @@ body {
 }
 
 .key-5.playing, .key-12.playing, .key-19.playing {
-  background-color: #56b4ac;
+  background-color: #3f61b7 #4161b3 
 }
 
 .key-6, .key-13, .key-20 {
@@ -134,7 +227,7 @@ body {
 }
 
 .key-6.playing, .key-13.playing, .key-20.playing {
-  background-color: #fbc0dc;
+  background-color: #4d6dc7;
 }
 
 .key-7, .key-14, .key-21 {
@@ -142,8 +235,9 @@ body {
 }
 
 .key-7.playing, .key-14.playing, .key-21.playing {
-  background-color: #f1faeb;
+  background-color: #5f7fd8;
 }
+*/
 
 
 @media (min-width : 768px) {
