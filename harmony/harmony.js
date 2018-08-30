@@ -1,7 +1,7 @@
 const F = [
   {
     name: 'F1',
-    color: '#1e305f',
+    color: '#0e263c',
     interval: 0,
   },
   {

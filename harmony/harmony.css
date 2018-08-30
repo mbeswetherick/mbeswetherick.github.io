@@ -94,87 +94,167 @@ body {
 }
 
 .key-1.playing {
-  background-color: #1e305f;
+  background-color: #142545;
 }
 
 .key-2 {
   background-color: #332f30;
 }
 
+.key-2.playing {
+  background-color: #172a4e;
+}
+
 .key-3 {
   background-color: #3c3839;
+}
+
+.key-3.playing {
+  background-color: #192f57;
 }
 
 .key-4 {
   background-color: #474445;
 }
 
+.key-4.playing {
+  background-color: #1c3461;
+}
+
 .key-5 {
   background-color: #524e4f;
+}
+
+.key-5.playing {
+  background-color: #1e3868;
 }
 
 .key-6 {
   background-color: #5c595a;
 }
 
+.key-6.playing {
+  background-color: #223d72;
+}
+
 .key-7 {
   background-color: #666464;
+}
+
+.key-7.playing {
+  background-color: #24427b;
 }
 
 .key-8 {
   background-color: #716e6f;
 }
 
+.key-8.playing {
+  background-color: #274783;
+}
+
 .key-9 {
   background-color: #7d7a7b;
+}
+
+.key-9.playing {
+  background-color: #294c8c;
 }
 
 .key-10 {
   background-color: #878585;
 }
 
+.key-10.playing {
+  background-color: #2b5095;
+}
+
 .key-11 {
   background-color: #918f90;
+}
+
+.key-11.playing {
+  background-color: #2e559e;
 }
 
 .key-12 {
   background-color: #9b999a;
 }
 
+.key-12.playing {
+  background-color: #315aa8;
+}
+
 .key-13 {
   background-color: #a6a5a5;
+}
+
+.key-13.playing {
+  background-color: #345eb0;
 }
 
 .key-14 {
   background-color: #b0afaf;
 }
 
+.key-14.playing {
+  background-color: #3663b9;
+}
+
 .key-15 {
   background-color: #bbbaba;
+}
+
+.key-15.playing {
+  background-color: #3968c1;
 }
 
 .key-16 {
   background-color: #c5c4c4;
 }
 
+.key-16.playing {
+  background-color: #3b6dca;
+}
+
 .key-17 {
   background-color: #d0cfcf;
+}
+
+.key-17.playing {
+  background-color: #3e72d3;
 }
 
 .key-18 {
   background-color: #dad9d9;
 }
 
+.key-18.playing {
+  background-color: #4077dd;
+}
+
 .key-19 {
   background-color: #e5e5e5;
+}
+
+.key-19.playing {
+  background-color: #437be5;
 }
 
 .key-20 {
   background-color: #efefef;
 }
 
+.key-20.playing {
+  background-color: #4680ef;
+}
+
 .key-21 {
   background-color: #fcfbfc;
+}
+
+.key-21.playing {
+  background-color: #4984f6;
 }
 
 /*
