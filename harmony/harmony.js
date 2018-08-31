@@ -90,6 +90,8 @@ handleKeyPlay = function (keyNum) {
 
   const noteHolder = document.getElementById('note-holder');
 
+  document.getElementById('info-holder').style.opacity = '0';
+
   //parentElement.insertBefore(newElement, parentElement.children[2]);
   let indexToAppend = 0;
   if (noteHolder.children.length) {
@@ -113,7 +115,7 @@ handleKeyPlay = function (keyNum) {
 
 
   window.setTimeout(function() {
-    keyBox.style.opacity = '1';
+    keyBox.style.opacity = '0.8';
   }, 100)
   //keyBox.style.opacity = '1';
 };
