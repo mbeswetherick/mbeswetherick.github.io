@@ -77,10 +77,10 @@ body {
   height: 300px;
   border-radius: 50%;
   background: #fff6e5;
-  position: absolute;
+  position: fixed;
   cursor: move;
   top: 334px;
-  left: 809px;
+  left: 60vw;
   display: flex;
   flex-direction: column;
 }
@@ -90,7 +90,7 @@ body {
   flex-direction: column;
   margin-top: auto;
   /* margin-bottom: auto; */
-  top: 100px;
+  top: 96px;
   left: 12%;
   position: absolute;
   text-align: left;

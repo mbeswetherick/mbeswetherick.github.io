@@ -126,7 +126,13 @@ handleKeyPause = function (keyNum) {
   keyBox.style.opacity = 0;
 
   window.setTimeout(function() {
-    keyBox.parentNode.removeChild(keyBox);
+    const parent = keyBox.parentNode;
+    console.log('how many kids ', parent.childNodes.length)
+    parent.removeChild(keyBox);
+    console.log('and after ', parent.childNodes.length)
+    if (parent.childNodes.length === 0) {
+      document.getElementById('info-holder').style.opacity = '1';
+    }
   }, 100);
 };
 
