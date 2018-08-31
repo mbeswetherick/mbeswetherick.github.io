@@ -22,6 +22,13 @@ const PHOTOS = [
     class: 'tiny-frame',
   },
   {
+    image: 'photos/vertical.png',
+    opacity: 1,
+    background: 'white',
+    textColor: 'vertical-text',
+    class: 'vertical-frame',
+  },
+  {
     image: 'photos/churchSky.JPG',
     opacity: 1,
     background: 'white',
@@ -47,12 +54,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
         if (slide.textColor) {
           textDom.classList.add(slide.textColor);
         } else {
-          textDom.classList.add(slide.textColor);
+          textDom.classList.remove(slide.textColor);
         }
         if (slide.class) {
           holder.classList.add(slide.class);
+          if (slide.class === 'tiny-frame') {
+            holder.classList.remove('vertical-frame');
+          }
         } else {
           holder.classList.remove('tiny-frame');
+          holder.classList.remove('vertical-frame');
         }
         window.setTimeout(function () {
           coverImage.src = slide.image;

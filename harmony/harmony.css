@@ -36,29 +36,45 @@ body {
 }
 
 .note-holder {
-  display: flex;
-  flex-direction: row;
   font-size: 11pt;
   margin-left: 0;
   padding-top: 0;
   width: 100%;
   height: 100%;
   margin-bottom: 0;
+  position: relative;
 }
 
 .note-box {
-  padding: 20px;
-  color: #eee;
-  transition: all 0.2s ease-in-out;
-  opacity: 0;
-  width: 100%;
-  text-align: center;
+      padding: 0;
+    color: #eee;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    border-radius: 50%;
 }
 
 .info {
   width: 218px;
   height: 269px;
   border-radius: 1px;
+  background: #fff6e5;
+  position: absolute;
+  cursor: move;
+  top: 334px;
+  left: 809px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
   background: #fff6e5;
   position: absolute;
   cursor: move;

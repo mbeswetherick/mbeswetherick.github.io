@@ -76,9 +76,15 @@ const F = [
 handleKeyPlay = function (keyNum) {
   const keyBox = document.createElement('div');
   const currentInterval = F[keyNum - 1].interval;
+  const percentage = keyNum * 4;
+
   keyBox.dataset.interval = currentInterval;
-  keyBox.innerHTML = F[keyNum - 1].name;
+  //keyBox.innerHTML = F[keyNum - 1].name;
   keyBox.style.background = F[keyNum - 1].color;
+  keyBox.style.width = (100 - percentage) + '%';
+  keyBox.style.height = (100 - percentage) + '%';
+  keyBox.style.top = (percentage / 2) + '%';
+  keyBox.style.left = (percentage / 2) + '%';
   keyBox.className = 'note-box';
   keyBox.id = 'note-box' + keyNum;
 
@@ -157,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // };
 
   //Make the DIV element draggagle:
-  dragElement(document.getElementById("info"));
+  dragElement(document.getElementById("info-circle"));
 
   function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
