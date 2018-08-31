@@ -89,7 +89,7 @@ body {
   display: flex;
   color: rgba(255, 255, 255, 0.9);
   margin-top: auto;
-  margin-left: auto;
+  margin-left: 45px;
   margin-right: auto;
   margin-bottom: 30px;
   font-family: 'Assistant';
@@ -367,4 +367,9 @@ body {
     height: 100vh;
     width: 14.285vw;
   }
+
+  .note-name {
+    margin-left: auto;
+  }
+
 }
