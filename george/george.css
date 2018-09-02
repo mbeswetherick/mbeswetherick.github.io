@@ -16,6 +16,13 @@ body {
   z-index: -1;
 }
 
+.tiny-frame-vertical {
+  width: 32vw !important;
+  height: 53vw !important;
+  left: 57.5vw !important;
+  top: 17vh !important;
+}
+
 .tiny-frame {
   width: 35vw !important;
   height: 35vw !important;

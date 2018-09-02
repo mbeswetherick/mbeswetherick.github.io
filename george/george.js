@@ -5,9 +5,10 @@ const PHOTOS = [
     background: 'white', 
   }, 
   {
-    image: 'photos/closeup.JPG',
-    opacity: 0,
+    image: 'photos/lakeComoOld.jpg',
+    opacity: 1,
     background: '#121212',
+    class: 'tiny-frame-vertical',
   },
   {
     image: 'photos/closeup.JPG',
@@ -50,25 +51,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
         console.log('in the view', entry);
         //entry.target.style.color = 'pink';
         coverImage.style.opacity = 0;
-        body.style.background = slide.background;
-        if (slide.textColor) {
-          textDom.classList.add(slide.textColor);
-        } else {
-          textDom.classList.remove(slide.textColor);
-        }
-        if (slide.class) {
-          holder.classList.add(slide.class);
-          if (slide.class === 'tiny-frame') {
-            holder.classList.remove('vertical-frame');
-          }
-        } else {
-          holder.classList.remove('tiny-frame');
-          holder.classList.remove('vertical-frame');
-        }
         window.setTimeout(function () {
-          coverImage.src = slide.image;
+          body.style.background = slide.background;
+          if (slide.textColor) {
+            textDom.classList.add(slide.textColor);
+          } else {
+            textDom.classList.remove(slide.textColor);
+          }
+          if (slide.class) {
+            holder.classList.remove('tiny-frame');
+            holder.classList.remove('vertical-frame');
+            holder.classList.remove('tiny-frame-vertical');
+            holder.classList.add(slide.class);
+          } else {
+            holder.classList.remove('tiny-frame');
+            holder.classList.remove('vertical-frame');
+            holder.classList.remove('tiny-frame-vertical');
+          }
           window.setTimeout(function () {
-            coverImage.style.opacity = slide.opacity;
+            coverImage.src = slide.image;
+            window.setTimeout(function () {
+              coverImage.style.opacity = slide.opacity;
+            }, 200)
           }, 200)
         }, 200)
       } else {
