@@ -150,7 +150,7 @@ handleCircleLeave = function () {
 handleKeyPlay = function (keyNum) {
   const keyBox = document.createElement('div');
   const currentInterval = F[keyNum - 1].interval;
-  const percentage = keyNum * 4;
+  const percentage = keyNum * 6;
   KEYS_PLAYING.push(true);
 
   const noteName = document.createElement('div');
