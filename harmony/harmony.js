@@ -131,15 +131,35 @@ loadKeys = function () {
 
 };
 
+const KEYS_PLAYING = [];
 
+handleCircleHover = function () {
+  if (KEYS_PLAYING.length) {
+    const notes = document.querySelectorAll('.circle-note-name');
+    notes.forEach(note => note.classList.add('playing'))
+  }
+}
+
+handleCircleLeave = function () {
+  if (KEYS_PLAYING.length) {
+    const notes = document.querySelectorAll('.circle-note-name');
+    notes.forEach(note => note.classList.remove('playing'))
+  }
+}
 
 handleKeyPlay = function (keyNum) {
   const keyBox = document.createElement('div');
   const currentInterval = F[keyNum - 1].interval;
   const percentage = keyNum * 4;
+  KEYS_PLAYING.push(true);
+
+  const noteName = document.createElement('div');
+  noteName.className = 'circle-note-name';
+  noteName.id = 'note-name' + keyNum;
+  noteName.innerHTML = F[keyNum - 1].name;
 
   keyBox.dataset.interval = currentInterval;
-  //keyBox.innerHTML = F[keyNum - 1].name;
+  keyBox.appendChild(noteName);
   keyBox.style.background = F[keyNum - 1].color;
   keyBox.style.width = (100 - percentage) + '%';
   keyBox.style.height = (100 - percentage) + '%';
@@ -190,6 +210,7 @@ handleKeyPause = function (keyNum) {
   keyWrapper.classList.remove('playing');
   const keyBox = document.getElementById('note-box' + keyNum);
   keyBox.style.opacity = 0;
+  KEYS_PLAYING.pop();
 
   window.setTimeout(function() {
     const parent = keyBox.parentNode;
@@ -222,6 +243,8 @@ const KEY_NUMS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
 
 document.addEventListener("DOMContentLoaded", function(event) { 
   //do work
+  document.getElementById('info-circle').onmouseenter = handleCircleHover;
+  document.getElementById('info-circle').onmouseleave = handleCircleLeave;
 
   KEY_NUMS.forEach(keyNum => {
     const key = document.getElementById(keyNum);

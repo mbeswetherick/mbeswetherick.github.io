@@ -372,4 +372,13 @@ body {
     margin-left: auto;
   }
 
+  .circle-note-name {
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .circle-note-name.playing {
+    margin-left: -340px;
+  }
+
 }
