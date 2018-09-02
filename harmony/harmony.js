@@ -3,73 +3,133 @@ const F = [
     name: 'F1',
     color: '#0e263c',
     interval: 0,
+    src: 'fNotes/F1.wav',
   },
   {
     name: 'G1',
     color: '#253d79',
     interval: 1,
+    src: 'fNotes/G1.wav',
   },
   {
     name: 'A1',
     color: '#2d488e',
     interval: 2,
+    src: 'fNotes/A1.wav',
   },
   {
     name: 'Bb1',
     color: '#3452a0',
     interval: 3,
+    src: 'fNotes/Bb1.wav',
   },
   {
     name: 'C1',
     color: '#3f61b7',
     interval: 4,
+    src: 'fNotes/C1.wav',
   },
   {
     name: 'D1',
     color: '#4d6dc7',
     interval: 5,
+    src: 'fNotes/D1.wav',
   },
   {
     name: 'E1',
     color: '#5f7fd8',
     interval: 6,
+    src: 'fNotes/E1.wav',
   },
   {
     name: 'F2',
     color: '#3e0c0e',
     interval: 7,
+    src: 'fNotes/F2.wav',
   },
   {
     name: 'G2',
     color: '#4d2a8e',
     interval: 8,
+    src: 'fNotes/G2.wav',
   },
   {
     name: 'A2',
     color: '#fafb3d',
     interval: 9,
+    src: 'fNotes/A2.wav',
   },
   {
     name: 'Bb2',
     color: '#f87825',
     interval: 10,
+    src: 'fNotes/Bb2.wav',
   },
   {
     name: 'C2',
     color: '#56b4ac',
     interval: 11,
+    src: 'fNotes/C2.wav',
   },
   {
     name: 'D2',
     color: '#fbc0dc',
     interval: 12,
+    src: 'fNotes/D2.wav',
   },
   {
     name: 'E2',
     color: '#f1faeb',
     interval: 13,
+    src: 'fNotes/E2.wav',
+  },
+  {
+    name: 'F3',
+    color: '#3e0c0e',
+    interval: 14,
+    src: 'fNotes/F3.wav',
+  },
+  {
+    name: 'G3',
+    color: '#4d2a8e',
+    interval: 15,
+    src: 'fNotes/G3.wav',
+  },
+  {
+    name: 'A3',
+    color: '#fafb3d',
+    interval: 16,
+    src: 'fNotes/A3.wav',
+  },
+  {
+    name: 'Bb3',
+    color: '#f87825',
+    interval: 17,
+    src: 'fNotes/Bb3.wav',
+  },
+  {
+    name: 'C3',
+    color: '#56b4ac',
+    interval: 18,
+    src: 'fNotes/C3.wav',
+  },
+  {
+    name: 'D3',
+    color: '#fbc0dc',
+    interval: 19,
+    src: 'fNotes/D3.wav',
+  },
+  {
+    name: 'E3',
+    color: '#f1faeb',
+    interval: 20,
+    src: 'fNotes/E3.wav',
   },
 ];
+
+loadKeys = function () {
+
+};
 
 
 
@@ -87,6 +147,9 @@ handleKeyPlay = function (keyNum) {
   keyBox.style.left = (percentage / 2) + '%';
   keyBox.className = 'note-box';
   keyBox.id = 'note-box' + keyNum;
+  keyBox.onclick = function () {
+    handleKeyPause(keyNum)
+  };
 
   const noteHolder = document.getElementById('note-holder');
 
@@ -121,7 +184,10 @@ handleKeyPlay = function (keyNum) {
 };
 
 handleKeyPause = function (keyNum) {
-  
+  const key = document.getElementById(`key${keyNum}`);
+  key.pause();
+  const keyWrapper = document.getElementById(keyNum);
+  keyWrapper.classList.remove('playing');
   const keyBox = document.getElementById('note-box' + keyNum);
   keyBox.style.opacity = 0;
 
@@ -145,8 +211,8 @@ const handleNoteClick = function () {
     keyWrapper.classList.add('playing');
     handleKeyPlay(keyNumber);
   } else {
-    key.pause();
-    keyWrapper.classList.remove('playing');
+    //  key.pause();
+    //  keyWrapper.classList.remove('playing');
     handleKeyPause(keyNumber);
   }
 };
@@ -157,7 +223,23 @@ const KEY_NUMS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
 document.addEventListener("DOMContentLoaded", function(event) { 
   //do work
 
-  KEY_NUMS.forEach(keyNum => document.getElementById(keyNum).onclick = handleNoteClick);
+  KEY_NUMS.forEach(keyNum => {
+    const key = document.getElementById(keyNum);
+    key.onclick = handleNoteClick;
+    const keyData = F[keyNum - 1];
+    console.log('le key ', key.childNodes);
+    const source = document.getElementById('source-' + keyNum);
+    source.src = keyData.src;
+    document.getElementById('key' + keyNum).load();
+    document.getElementById('name-' + keyNum).innerHTML = keyData.name;
+    // key.childNodes.forEach(node => {
+    //   if (node.localName === 'audio') {
+    //     console.log('audio!')
+    //     console.log(node)
+    //   }
+    // });
+    //key.innerHTML = F[keyNum - 1]
+  });
   // document.getElementById('1').onclick = handleNoteClick;
 
   // document.getElementById('2').onclick = function () {
