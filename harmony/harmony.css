@@ -131,6 +131,7 @@ body {
 
 .key-1.playing {
   background-color: #142545;
+  background-color: #0f2f1c;
 }
 
 .key-2 {
@@ -139,6 +140,8 @@ body {
 
 .key-2.playing {
   background-color: #172a4e;
+  background-color: #193a27;
+
 }
 
 .key-3 {
@@ -147,6 +150,8 @@ body {
 
 .key-3.playing {
   background-color: #192f57;
+  background-color: #234431;
+
 }
 
 .key-4 {
@@ -155,6 +160,8 @@ body {
 
 .key-4.playing {
   background-color: #1c3461;
+  background-color: #2d4e3b;
+
 }
 
 .key-5 {
@@ -163,6 +170,8 @@ body {
 
 .key-5.playing {
   background-color: #1e3868;
+  background-color: #385946;
+
 }
 
 .key-6 {
@@ -171,6 +180,8 @@ body {
 
 .key-6.playing {
   background-color: #223d72;
+  background-color: #426350;
+
 }
 
 .key-7 {
@@ -179,6 +190,8 @@ body {
 
 .key-7.playing {
   background-color: #24427b;
+  background-color: #4c6d5a;
+
 }
 
 .key-8 {
@@ -187,6 +200,8 @@ body {
 
 .key-8.playing {
   background-color: #274783;
+  background-color: #567763;
+
 }
 
 .key-9 {
@@ -195,6 +210,8 @@ body {
 
 .key-9.playing {
   background-color: #294c8c;
+  background-color: #5f806c;
+
 }
 
 .key-10 {
@@ -203,6 +220,8 @@ body {
 
 .key-10.playing {
   background-color: #2b5095;
+  background-color: #698a76;
+
 }
 
 .key-11 {
@@ -211,6 +230,8 @@ body {
 
 .key-11.playing {
   background-color: #2e559e;
+  background-color: #749581;
+
 }
 
 .key-12 {
@@ -219,6 +240,8 @@ body {
 
 .key-12.playing {
   background-color: #315aa8;
+  background-color: #7f9f8c;
+
 }
 
 .key-13 {
@@ -227,6 +250,8 @@ body {
 
 .key-13.playing {
   background-color: #345eb0;
+  background-color: #89a996;
+
 }
 
 .key-14 {
@@ -235,6 +260,8 @@ body {
 
 .key-14.playing {
   background-color: #3663b9;
+  background-color: #92b39f;
+
 }
 
 .key-15 {
@@ -243,6 +270,8 @@ body {
 
 .key-15.playing {
   background-color: #3968c1;
+  background-color: #9ebeab;
+
 }
 
 .key-16 {
@@ -251,6 +280,8 @@ body {
 
 .key-16.playing {
   background-color: #3b6dca;
+  background-color: #a8c8b5;
+
 }
 
 .key-17 {
@@ -259,6 +290,8 @@ body {
 
 .key-17.playing {
   background-color: #3e72d3;
+  background-color: #b2d2bf;
+
 }
 
 .key-18 {
@@ -267,6 +300,8 @@ body {
 
 .key-18.playing {
   background-color: #4077dd;
+  background-color: #bbdbc8;
+
 }
 
 .key-19 {
@@ -275,6 +310,8 @@ body {
 
 .key-19.playing {
   background-color: #437be5;
+  background-color: #c7e7d4;
+
 }
 
 .key-20 {
@@ -283,6 +320,8 @@ body {
 
 .key-20.playing {
   background-color: #4680ef;
+  background-color: #d0f0dd;
+
 }
 
 .key-21 {
@@ -291,6 +330,8 @@ body {
 
 .key-21.playing {
   background-color: #4984f6;
+  background-color: #dafae7;
+
 }
 
 /*
