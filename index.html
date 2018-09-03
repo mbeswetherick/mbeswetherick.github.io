@@ -17,7 +17,7 @@
     </script>
 
     <style>
-    @media only screen and (min-device-width : 320px) {
+    @media (min-width : 320px) {
       body {
         margin: 0;
         background-color: #F5EDE0;
@@ -28,16 +28,22 @@
         font-family: 'Assistant', 'helvetica neue', 'helvetica', arial;
         font-weight: 'bold';
         margin-bottom: 15px;
-        font-size: 27.5pt;
+        font-size: 34.5pt;
         border-bottom: 15px solid black;
         font-weight: 700;
+        line-height: 33pt;
+        padding-bottom: 5px;
+      }
+
+      ::selection {
+        background: #b3c4ca;
       }
 
       .hello {
-        margin-top: 45px;
+        margin-top: 30px;
         font-family: 'Assistant';
-        font-size: 31px;
-        line-height: 46px;
+        font-size: 21px;
+        line-height: 37px;
         max-width: 845px;
       }
 
@@ -110,8 +116,8 @@
         font-family: 'Assistant', 'helvetica', arial;
         font-weight: 400;
         font-size: 10.5pt;
-        line-height: 21pt;
-        line-height: 30pt;
+        font-size: 21px;
+        line-height: 37px;
         margin-bottom: 30px;
       }
 
@@ -180,7 +186,7 @@
     }
 
       /* Desktops and laptops ----------- */
-      @media screen and (min-width : 768px) {
+      @media (min-width : 768px) {
       /* Styles */
 
         a {
@@ -191,6 +197,11 @@
           text-decoration: none;
           color: black;
           width: 100%;
+        }
+
+        .hello {
+          font-size: 31px;
+          line-height: 46px;
         }
 
         .art {
