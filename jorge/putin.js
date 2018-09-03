@@ -5,10 +5,10 @@ const PHOTOS = [
     background: 'white', 
   }, 
   {
-    image: 'photos/lakeComoOld.jpg',
+    image: 'photos/xi.jpg',
     opacity: 1,
     background: '#121212',
-    class: 'tiny-frame-vertical',
+    //  class: 'tiny-frame-vertical',
   },
   {
     image: 'photos/closeup.JPG',
@@ -39,7 +39,7 @@ const PHOTOS = [
 document.addEventListener("DOMContentLoaded", function(event) { 
   //do work
 
-  const myImgs = document.querySelectorAll('.text');
+  const myImgs = document.querySelectorAll('.question-wrapper');
   const coverImage = document.getElementById('coverImage');
   const body = document.getElementById('body');
   const holder = document.getElementById('holder');
