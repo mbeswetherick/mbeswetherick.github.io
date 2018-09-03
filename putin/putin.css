@@ -5,3 +5,29 @@ h1 {
   font-size: 40pt;
   font-family: 'Assistant';
 }
+
+.photo {
+  width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+.mask {
+  position: absolute;
+  width: 50%;
+  height: calc(100% - 4px);
+  background: #ebebeb;
+  top: 0;
+  left: 50%;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.photo.unveil .mask {
+  opacity: 0;
+}
