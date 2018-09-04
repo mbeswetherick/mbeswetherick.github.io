@@ -42,9 +42,11 @@ const handleQuestionClickBolton = function () {
   if (this.innerHTML.includes('John Bolton')) {
     this.style.background = 'gold';
     document.getElementById('mask').style.opacity = '0';
+    document.getElementById('audio-correct').play();
   } else {
     this.style.background = 'pink';
     this.childNodes[1].style.textDecoration = 'line-through';
+    document.getElementById('audio-wrong').play();
   }
 }
 
@@ -53,9 +55,11 @@ const handleQuestionClickXi = function () {
   if (this.innerHTML.includes('Xi Jingping')) {
     this.style.background = 'gold';
     document.getElementById('mask').style.opacity = '0';
+    document.getElementById('audio-correct').play();
   } else {
     this.style.background = 'pink';
     this.childNodes[1].style.textDecoration = 'line-through';
+    document.getElementById('audio-wrong').play();
   }
 }
 
@@ -64,9 +68,11 @@ const handleQuestionClickTrump = function () {
   if (this.innerHTML.includes('Donald Trump')) {
     this.style.background = 'gold';
     document.getElementById('mask').style.opacity = '0';
+    document.getElementById('audio-correct').play();
   } else {
     this.style.background = 'pink';
     this.childNodes[1].style.textDecoration = 'line-through';
+    document.getElementById('audio-wrong').play();
   }
 }
 
