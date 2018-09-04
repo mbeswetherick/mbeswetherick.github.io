@@ -3,127 +3,127 @@ const F = [
     name: 'F1',
     color: '#0f2f1c',
     interval: 0,
-    src: 'fNotes/F1.wav',
+    src: 'notes/F1.wav',
   },
   {
     name: 'G1',
     color: '#193a27',
     interval: 1,
-    src: 'fNotes/G1.wav',
+    src: 'notes/G1.wav',
   },
   {
     name: 'A1',
     color: '#234431',
     interval: 2,
-    src: 'fNotes/A1.wav',
+    src: 'notes/A1.wav',
   },
   {
     name: 'Bb1',
     color: '#2d4e3b',
     interval: 3,
-    src: 'fNotes/Bb1.wav',
+    src: 'notes/Bb1.wav',
   },
   {
     name: 'C1',
     color: '#385946',
     interval: 4,
-    src: 'fNotes/C1.wav',
+    src: 'notes/C1.wav',
   },
   {
     name: 'D1',
     color: '#426350',
     interval: 5,
-    src: 'fNotes/D1.wav',
+    src: 'notes/D1.wav',
   },
   {
     name: 'E1',
     color: '#4c6d5a',
     interval: 6,
-    src: 'fNotes/E1.wav',
+    src: 'notes/E1.wav',
   },
   {
     name: 'F2',
     color: '#567763',
     interval: 7,
-    src: 'fNotes/F2.wav',
+    src: 'notes/F2.wav',
   },
   {
     name: 'G2',
     color: '#5f806c',
     interval: 8,
-    src: 'fNotes/G2.wav',
+    src: 'notes/G2.wav',
   },
   {
     name: 'A2',
     color: '#698a76',
     interval: 9,
-    src: 'fNotes/A2.wav',
+    src: 'notes/A2.wav',
   },
   {
     name: 'Bb2',
     color: '#749581',
     interval: 10,
-    src: 'fNotes/Bb2.wav',
+    src: 'notes/Bb2.wav',
   },
   {
     name: 'C2',
     color: '#7f9f8c',
     interval: 11,
-    src: 'fNotes/C2.wav',
+    src: 'notes/C2.wav',
   },
   {
     name: 'D2',
     color: '#89a996',
     interval: 12,
-    src: 'fNotes/D2.wav',
+    src: 'notes/D2.wav',
   },
   {
     name: 'E2',
     color: '#92b39f',
     interval: 13,
-    src: 'fNotes/E2.wav',
+    src: 'notes/E2.wav',
   },
   {
     name: 'F3',
     color: '#9ebeab',
     interval: 14,
-    src: 'fNotes/F3.wav',
+    src: 'notes/F3.wav',
   },
   {
     name: 'G3',
     color: '#a8c8b5',
     interval: 15,
-    src: 'fNotes/G3.wav',
+    src: 'notes/G3.wav',
   },
   {
     name: 'A3',
     color: '#b2d2bf',
     interval: 16,
-    src: 'fNotes/A3.wav',
+    src: 'notes/A3.wav',
   },
   {
     name: 'Bb3',
     color: '#bbdbc8',
     interval: 17,
-    src: 'fNotes/Bb3.wav',
+    src: 'notes/Bb3.wav',
   },
   {
     name: 'C3',
     color: '#c7e7d4',
     interval: 18,
-    src: 'fNotes/C3.wav',
+    src: 'notes/C3.wav',
   },
   {
     name: 'D3',
     color: '#d0f0dd',
     interval: 19,
-    src: 'fNotes/D3.wav',
+    src: 'notes/D3.wav',
   },
   {
     name: 'E3',
     color: '#dafae7',
     interval: 20,
-    src: 'fNotes/E3.wav',
+    src: 'notes/E3.wav',
   },
 ];
 
@@ -132,127 +132,256 @@ const A = [
     name: 'A1',
     color: '#0f2f1c',
     interval: 0,
-    src: 'aNotes/A1.wav',
+    src: 'notes/A1.wav',
   },
   {
     name: 'B1',
     color: '#193a27',
     interval: 1,
-    src: 'aNotes/B1.wav',
+    src: 'notes/B1.wav',
   },
   {
     name: 'Db1',
     color: '#234431',
     interval: 2,
-    src: 'aNotes/Db1.wav',
+    src: 'notes/Db1.wav',
   },
   {
     name: 'D1',
     color: '#2d4e3b',
     interval: 3,
-    src: 'aNotes/D1.wav',
+    src: 'notes/D1.wav',
   },
   {
     name: 'E1',
     color: '#385946',
     interval: 4,
-    src: 'aNotes/E1.wav',
+    src: 'notes/E1.wav',
   },
   {
     name: 'Gb1',
     color: '#426350',
     interval: 5,
-    src: 'aNotes/Gb1.wav',
+    src: 'notes/Gb1.wav',
   },
   {
     name: 'Ab1',
     color: '#4c6d5a',
     interval: 6,
-    src: 'aNotes/Ab1.wav',
+    src: 'notes/Ab1.wav',
   },
   {
     name: 'A2',
     color: '#567763',
     interval: 7,
-    src: 'aNotes/A2.wav',
+    src: 'notes/A2.wav',
   },
   {
     name: 'B2',
     color: '#5f806c',
     interval: 8,
-    src: 'aNotes/B2.wav',
+    src: 'notes/B2.wav',
   },
   {
     name: 'Db2',
     color: '#698a76',
     interval: 9,
-    src: 'aNotes/Db2.wav',
+    src: 'notes/Db2.wav',
   },
   {
     name: 'D2',
     color: '#749581',
     interval: 10,
-    src: 'aNotes/D2.wav',
+    src: 'notes/D2.wav',
   },
   {
     name: 'E2',
     color: '#7f9f8c',
     interval: 11,
-    src: 'aNotes/E2.wav',
+    src: 'notes/E2.wav',
   },
   {
     name: 'Gb2',
     color: '#89a996',
     interval: 12,
-    src: 'aNotes/Gb2.wav',
+    src: 'notes/Gb2.wav',
   },
   {
     name: 'Ab2',
     color: '#92b39f',
     interval: 13,
-    src: 'aNotes/Ab2.wav',
+    src: 'notes/Ab2.wav',
   },
   {
     name: 'A3',
     color: '#9ebeab',
     interval: 14,
-    src: 'aNotes/A3.wav',
+    src: 'notes/A3.wav',
   },
   {
     name: 'B3',
     color: '#a8c8b5',
     interval: 15,
-    src: 'aNotes/B3.wav',
+    src: 'notes/B3.wav',
   },
   {
     name: 'Db3',
     color: '#b2d2bf',
     interval: 16,
-    src: 'aNotes/Db3.wav',
+    src: 'notes/Db3.wav',
   },
   {
     name: 'D3',
     color: '#bbdbc8',
     interval: 17,
-    src: 'aNotes/D3.wav',
+    src: 'notes/D3.wav',
   },
   {
     name: 'E3',
     color: '#c7e7d4',
     interval: 18,
-    src: 'aNotes/E3.wav',
+    src: 'notes/E3.wav',
   },
   {
     name: 'Gb3',
     color: '#d0f0dd',
     interval: 19,
-    src: 'aNotes/Gb3.wav',
+    src: 'notes/Gb3.wav',
   },
   {
     name: 'Ab3',
     color: '#dafae7',
     interval: 20,
-    src: 'aNotes/Ab3.wav',
+    src: 'notes/Ab3.wav',
+  },
+];
+
+const B = [
+  {
+    name: 'B1',
+    color: '#0f2f1c',
+    interval: 0,
+    src: 'notes/B1.wav',
+  },
+  {
+    name: 'Db1',
+    color: '#193a27',
+    interval: 1,
+    src: 'notes/Db1.wav',
+  },
+  {
+    name: 'Eb1',
+    color: '#234431',
+    interval: 2,
+    src: 'notes/Eb1.wav',
+  },
+  {
+    name: 'E1',
+    color: '#2d4e3b',
+    interval: 3,
+    src: 'notes/E1.wav',
+  },
+  {
+    name: 'Gb1',
+    color: '#385946',
+    interval: 4,
+    src: 'notes/Gb1.wav',
+  },
+  {
+    name: 'Ab1',
+    color: '#426350',
+    interval: 5,
+    src: 'notes/Ab1.wav',
+  },
+  {
+    name: 'Bb1',
+    color: '#4c6d5a',
+    interval: 6,
+    src: 'notes/Bb1.wav',
+  },
+  {
+    name: 'A2',
+    color: '#567763',
+    interval: 7,
+    src: 'notes/A2.wav',
+  },
+  {
+    name: 'B2',
+    color: '#5f806c',
+    interval: 8,
+    src: 'notes/B2.wav',
+  },
+  {
+    name: 'Db2',
+    color: '#698a76',
+    interval: 9,
+    src: 'notes/Db2.wav',
+  },
+  {
+    name: 'D2',
+    color: '#749581',
+    interval: 10,
+    src: 'notes/D2.wav',
+  },
+  {
+    name: 'E2',
+    color: '#7f9f8c',
+    interval: 11,
+    src: 'notes/E2.wav',
+  },
+  {
+    name: 'Gb2',
+    color: '#89a996',
+    interval: 12,
+    src: 'notes/Gb2.wav',
+  },
+  {
+    name: 'Ab2',
+    color: '#92b39f',
+    interval: 13,
+    src: 'notes/Ab2.wav',
+  },
+  {
+    name: 'A3',
+    color: '#9ebeab',
+    interval: 14,
+    src: 'notes/A3.wav',
+  },
+  {
+    name: 'B3',
+    color: '#a8c8b5',
+    interval: 15,
+    src: 'notes/B3.wav',
+  },
+  {
+    name: 'Db3',
+    color: '#b2d2bf',
+    interval: 16,
+    src: 'notes/Db3.wav',
+  },
+  {
+    name: 'D3',
+    color: '#bbdbc8',
+    interval: 17,
+    src: 'notes/D3.wav',
+  },
+  {
+    name: 'E3',
+    color: '#c7e7d4',
+    interval: 18,
+    src: 'notes/E3.wav',
+  },
+  {
+    name: 'Gb3',
+    color: '#d0f0dd',
+    interval: 19,
+    src: 'notes/Gb3.wav',
+  },
+  {
+    name: 'Ab3',
+    color: '#dafae7',
+    interval: 20,
+    src: 'notes/Ab3.wav',
   },
 ];
 
@@ -262,19 +391,23 @@ let currentKey;
 const KEY_NUMS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
 
 loadKeys = function (root) {
-  if (root === 'F') {
+  if (root === 'f') {
     noteSet = F;
-    currentKey = 'F';
+    currentKey = 'f';
   }
-  if (root === 'A') {
+  if (root === 'a') {
     noteSet = A;
-    currentKey = 'A';
+    currentKey = 'a';
+  }
+  if (root === 'b') {
+    noteSet = B;
+    currentKey = 'b';
   }
   KEY_NUMS.forEach(keyNum => {
     const key = document.getElementById(keyNum);
     key.onclick = handleNoteClick;
     const keyData = noteSet[keyNum - 1];
-    console.log('le key ', key.childNodes);
+    //console.log('le key ', key.childNodes);
     const source = document.getElementById('source-' + keyNum);
     source.src = keyData.src;
     document.getElementById('key' + keyNum).load();
@@ -289,11 +422,7 @@ loadKeys = function (root) {
   });
 };
 
-changeKey = function () {
-  console.log('change the damn key');
-  let root;
-  if (currentKey === 'A') root = 'F';
-  if (currentKey === 'F') root = 'A';
+changeKey = function (root) {
   loadKeys(root);
 }
 
@@ -409,7 +538,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   document.getElementById('info-circle').onmouseenter = handleCircleHover;
   document.getElementById('info-circle').onmouseleave = handleCircleLeave;
 
-  loadKeys('A');
+  loadKeys('a');
   // KEY_NUMS.forEach(keyNum => {
   //   const key = document.getElementById(keyNum);
   //   key.onclick = handleNoteClick;
@@ -443,12 +572,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
   dragElement(document.getElementById("info-circle"));
   //  document.getElementById('key-changer').onclick = changeKey;
   document.onkeypress = function(e) {
-    changeKey();
-    e = e || window.event;
-    var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
-    if (charCode) {
-        alert("Character typed: " + String.fromCharCode(charCode));
-    }
+    changeKey(String.fromCharCode(e.keyCode));
+    // e = e || window.event;
+    // var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
+    // if (charCode) {
+    //     alert("Character typed: " + String.fromCharCode(charCode));
+    // }
   };
 
   function dragElement(elmnt) {
