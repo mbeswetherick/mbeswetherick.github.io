@@ -403,6 +403,8 @@ loadKeys = function (root) {
     noteSet = B;
     currentKey = 'b';
   }
+
+  document.getElementById('note-disclaimer').innerHTML = root.toUpperCase();
   KEY_NUMS.forEach(keyNum => {
     const key = document.getElementById(keyNum);
     key.onclick = handleNoteClick;
