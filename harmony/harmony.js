@@ -294,96 +294,226 @@ const B = [
     src: 'notes/Ab1.wav',
   },
   {
-    name: 'Bb1',
+    name: 'Bb2',
     color: '#4c6d5a',
     interval: 6,
-    src: 'notes/Bb1.wav',
-  },
-  {
-    name: 'A2',
-    color: '#567763',
-    interval: 7,
-    src: 'notes/A2.wav',
+    src: 'notes/Bb2.wav',
   },
   {
     name: 'B2',
-    color: '#5f806c',
-    interval: 8,
+    color: '#567763',
+    interval: 7,
     src: 'notes/B2.wav',
   },
   {
     name: 'Db2',
-    color: '#698a76',
-    interval: 9,
+    color: '#5f806c',
+    interval: 8,
     src: 'notes/Db2.wav',
   },
   {
-    name: 'D2',
-    color: '#749581',
-    interval: 10,
-    src: 'notes/D2.wav',
+    name: 'Eb2',
+    color: '#698a76',
+    interval: 9,
+    src: 'notes/Eb2.wav',
   },
   {
     name: 'E2',
-    color: '#7f9f8c',
-    interval: 11,
+    color: '#749581',
+    interval: 10,
     src: 'notes/E2.wav',
   },
   {
     name: 'Gb2',
-    color: '#89a996',
-    interval: 12,
+    color: '#7f9f8c',
+    interval: 11,
     src: 'notes/Gb2.wav',
   },
   {
     name: 'Ab2',
-    color: '#92b39f',
-    interval: 13,
+    color: '#89a996',
+    interval: 12,
     src: 'notes/Ab2.wav',
   },
   {
-    name: 'A3',
-    color: '#9ebeab',
-    interval: 14,
-    src: 'notes/A3.wav',
+    name: 'Bb2',
+    color: '#92b39f',
+    interval: 13,
+    src: 'notes/Bb3.wav',
   },
   {
     name: 'B3',
-    color: '#a8c8b5',
-    interval: 15,
+    color: '#9ebeab',
+    interval: 14,
     src: 'notes/B3.wav',
   },
   {
     name: 'Db3',
-    color: '#b2d2bf',
-    interval: 16,
+    color: '#a8c8b5',
+    interval: 15,
     src: 'notes/Db3.wav',
   },
   {
-    name: 'D3',
-    color: '#bbdbc8',
-    interval: 17,
-    src: 'notes/D3.wav',
+    name: 'Eb3',
+    color: '#b2d2bf',
+    interval: 16,
+    src: 'notes/Eb3.wav',
   },
   {
     name: 'E3',
-    color: '#c7e7d4',
-    interval: 18,
+    color: '#bbdbc8',
+    interval: 17,
     src: 'notes/E3.wav',
   },
   {
     name: 'Gb3',
-    color: '#d0f0dd',
-    interval: 19,
+    color: '#c7e7d4',
+    interval: 18,
     src: 'notes/Gb3.wav',
   },
   {
     name: 'Ab3',
-    color: '#dafae7',
-    interval: 20,
+    color: '#d0f0dd',
+    interval: 19,
     src: 'notes/Ab3.wav',
   },
+  {
+    name: 'Bb3',
+    color: '#dafae7',
+    interval: 20,
+    src: 'notes/Bb3.wav',
+  },
 ];
+
+const C = [
+  {
+    name: 'C1',
+    color: '#0f2f1c',
+    interval: 0,
+    src: 'notes/C1.wav',
+  },
+  {
+    name: 'D1',
+    color: '#193a27',
+    interval: 1,
+    src: 'notes/D1.wav',
+  },
+  {
+    name: 'E1',
+    color: '#234431',
+    interval: 2,
+    src: 'notes/E1.wav',
+  },
+  {
+    name: 'F1',
+    color: '#2d4e3b',
+    interval: 3,
+    src: 'notes/F2.wav',
+  },
+  {
+    name: 'G1',
+    color: '#385946',
+    interval: 4,
+    src: 'notes/G2.wav',
+  },
+  {
+    name: 'A1',
+    color: '#426350',
+    interval: 5,
+    src: 'notes/A2.wav',
+  },
+  {
+    name: 'B1',
+    color: '#4c6d5a',
+    interval: 6,
+    src: 'notes/B2.wav',
+  },
+  {
+    name: 'C2',
+    color: '#567763',
+    interval: 7,
+    src: 'notes/C2.wav',
+  },
+  {
+    name: 'D2',
+    color: '#5f806c',
+    interval: 8,
+    src: 'notes/D2.wav',
+  },
+  {
+    name: 'E2',
+    color: '#698a76',
+    interval: 9,
+    src: 'notes/E2.wav',
+  },
+  {
+    name: 'F2',
+    color: '#749581',
+    interval: 10,
+    src: 'notes/F3.wav',
+  },
+  {
+    name: 'G2',
+    color: '#7f9f8c',
+    interval: 11,
+    src: 'notes/G3.wav',
+  },
+  {
+    name: 'A2',
+    color: '#89a996',
+    interval: 12,
+    src: 'notes/A3.wav',
+  },
+  {
+    name: 'B2',
+    color: '#92b39f',
+    interval: 13,
+    src: 'notes/B3.wav',
+  },
+  {
+    name: 'C3',
+    color: '#9ebeab',
+    interval: 14,
+    src: 'notes/C3.wav',
+  },
+  {
+    name: 'D3',
+    color: '#a8c8b5',
+    interval: 15,
+    src: 'notes/D3.wav',
+  },
+  {
+    name: 'E3',
+    color: '#b2d2bf',
+    interval: 16,
+    src: 'notes/E3.wav',
+  },
+  {
+    name: 'E3',
+    color: '#bbdbc8',
+    interval: 17,
+    src: 'notes/E3.wav',
+  },
+  {
+    name: 'Gb3',
+    color: '#c7e7d4',
+    interval: 18,
+    src: 'notes/Gb3.wav',
+  },
+  {
+    name: 'Ab3',
+    color: '#d0f0dd',
+    interval: 19,
+    src: 'notes/Ab3.wav',
+  },
+  {
+    name: 'Bb3',
+    color: '#dafae7',
+    interval: 20,
+    src: 'notes/Bb3.wav',
+  },
+];
+
 
 let noteSet;
 let currentKey;
@@ -402,6 +532,11 @@ loadKeys = function (root) {
   if (root === 'b') {
     noteSet = B;
     currentKey = 'b';
+  }
+
+  if (root === 'c') {
+    noteSet = C;
+    currentKey = 'c';
   }
 
   document.getElementById('note-disclaimer').innerHTML = root.toUpperCase();
@@ -447,8 +582,8 @@ handleCircleLeave = function () {
 handleKeyPlay = function (keyNum) {
   const keyBox = document.createElement('div');
   const currentInterval = noteSet[keyNum - 1].interval;
-  const percentage = keyNum * 6;
   KEYS_PLAYING.push(true);
+  const percentage = KEYS_PLAYING.length * 13;
 
   const noteName = document.createElement('div');
   noteName.className = 'circle-note-name';

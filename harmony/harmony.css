@@ -97,6 +97,10 @@ body {
   letter-spacing: 0.1em;
 }
 
+.you-are-playing {
+  font-weight: 700;
+}
+
 .info-holder {
   /* background: wheat; */
   flex-direction: column;
@@ -421,6 +425,7 @@ body {
     text-align: left;
     opacity: 0;
     top: -8px;
+    font-weight: 300;
     position: absolute;
 }
   }
