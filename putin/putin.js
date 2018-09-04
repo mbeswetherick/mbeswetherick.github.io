@@ -2,7 +2,8 @@ const PHOTOS = [
   {
     image: 'photos/bolton.jpg',
     opacity: 1,
-    background: 'white', 
+    background: 'white',
+    answer: 'John Bolton', 
   }, 
   {
     image: 'photos/xi.jpg',
@@ -34,7 +35,25 @@ const PHOTOS = [
     opacity: 1,
     background: 'white',
   },
-]
+];
+
+const handleQuestionClick = function () {
+  //alert(this.innerHTML.includes('John Bolton'));
+  if (this.innerHTML.includes('John Bolton')) {
+    this.style.background = 'gold';
+  } else {
+    this.style.background = 'pink';
+    console.log(this.childNodes)
+    this.childNodes[1].style.textDecoration = 'line-through';
+  }
+}
+
+const setupQuiz = function () {
+  const questions = document.querySelectorAll('.question-possibility-0');
+  questions.forEach(question => {
+    question.onclick = handleQuestionClick;
+  });
+};
 
 document.addEventListener("DOMContentLoaded", function(event) { 
   //do work
@@ -84,5 +103,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   myImgs.forEach(image => {
     observer.observe(image);
   });
+
+  setupQuiz();
 
 });
