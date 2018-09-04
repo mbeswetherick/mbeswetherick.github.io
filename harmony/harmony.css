@@ -129,6 +129,12 @@ body {
   display: flex;
 }
 
+.key-8, .key-15 {
+  width: calc(100vw - 4px);
+  padding-left: 0;
+  border-left: 4px solid white; 
+}
+
 .key-1 {
   background-color: #272324;
 }
@@ -400,6 +406,11 @@ body {
 }
 */
 
+.circle-note-name.playing {
+  opacity: 1;
+  margin-left: -200px;
+}
+
 
 @media (min-width : 768px) {
   .wrapper {
@@ -427,12 +438,13 @@ body {
     top: -8px;
     font-weight: 300;
     position: absolute;
-}
   }
 
-  .circle-note-name.playing {
-    opacity: 1;
-    margin-left: -200px;
+  .key-8, .key-15 {
+    height: calc(100vh - 4px);
+    padding-bottom: 0;
+    border-bottom: 4px solid white; 
+    border-left: none;
   }
 
 }
