@@ -257,12 +257,19 @@ const A = [
 ];
 
 let noteSet;
+let currentKey;
 
 const KEY_NUMS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
 
 loadKeys = function (root) {
-  if (root === 'F') noteSet = F;
-  if (root === 'A') noteSet = A;
+  if (root === 'F') {
+    noteSet = F;
+    currentKey = 'F';
+  }
+  if (root === 'A') {
+    noteSet = A;
+    currentKey = 'A';
+  }
   KEY_NUMS.forEach(keyNum => {
     const key = document.getElementById(keyNum);
     key.onclick = handleNoteClick;
@@ -281,6 +288,14 @@ loadKeys = function (root) {
     //key.innerHTML = F[keyNum - 1]
   });
 };
+
+changeKey = function () {
+  console.log('change the damn key');
+  let root;
+  if (currentKey === 'A') root = 'F';
+  if (currentKey === 'F') root = 'A';
+  loadKeys(root);
+}
 
 const KEYS_PLAYING = [];
 
@@ -426,6 +441,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   //Make the DIV element draggagle:
   dragElement(document.getElementById("info-circle"));
+  //  document.getElementById('key-changer').onclick = changeKey;
+  document.onkeypress = function(e) {
+    changeKey();
+    e = e || window.event;
+    var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
+    if (charCode) {
+        alert("Character typed: " + String.fromCharCode(charCode));
+    }
+  };
 
   function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
