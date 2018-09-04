@@ -12,7 +12,7 @@ const PHOTOS = [
     //  class: 'tiny-frame-vertical',
   },
   {
-    image: 'photos/closeup.JPG',
+    image: 'photos/trump.jpg',
     opacity: 1,
     background: 'white',
   },
@@ -37,13 +37,35 @@ const PHOTOS = [
   },
 ];
 
-const handleQuestionClick = function () {
+const handleQuestionClickBolton = function () {
   //alert(this.innerHTML.includes('John Bolton'));
   if (this.innerHTML.includes('John Bolton')) {
     this.style.background = 'gold';
+    document.getElementById('mask').style.opacity = '0';
   } else {
     this.style.background = 'pink';
-    console.log(this.childNodes)
+    this.childNodes[1].style.textDecoration = 'line-through';
+  }
+}
+
+const handleQuestionClickXi = function () {
+  //alert(this.innerHTML.includes('John Bolton'));
+  if (this.innerHTML.includes('Xi Jingping')) {
+    this.style.background = 'gold';
+    document.getElementById('mask').style.opacity = '0';
+  } else {
+    this.style.background = 'pink';
+    this.childNodes[1].style.textDecoration = 'line-through';
+  }
+}
+
+const handleQuestionClickTrump = function () {
+  //alert(this.innerHTML.includes('John Bolton'));
+  if (this.innerHTML.includes('Donald Trump')) {
+    this.style.background = 'gold';
+    document.getElementById('mask').style.opacity = '0';
+  } else {
+    this.style.background = 'pink';
     this.childNodes[1].style.textDecoration = 'line-through';
   }
 }
@@ -51,7 +73,17 @@ const handleQuestionClick = function () {
 const setupQuiz = function () {
   const questions = document.querySelectorAll('.question-possibility-0');
   questions.forEach(question => {
-    question.onclick = handleQuestionClick;
+    question.onclick = handleQuestionClickBolton;
+  });
+
+  const questionsXi = document.querySelectorAll('.question-possibility-1');
+  questionsXi.forEach(question => {
+    question.onclick = handleQuestionClickXi;
+  });
+
+  const questionsTrump = document.querySelectorAll('.question-possibility-2');
+  questionsTrump.forEach(question => {
+    question.onclick = handleQuestionClickTrump;
   });
 };
 
@@ -65,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.intersectionRatio > 0) {
+        document.getElementById('mask').style.opacity = '1';
         const slide = PHOTOS[parseInt(entry.target.id, 10)];
         const textDom = document.getElementById(entry.target.id);
         console.log('in the view', entry);
