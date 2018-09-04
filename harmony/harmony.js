@@ -127,8 +127,159 @@ const F = [
   },
 ];
 
-loadKeys = function () {
+const A = [
+  {
+    name: 'A1',
+    color: '#0f2f1c',
+    interval: 0,
+    src: 'aNotes/A1.wav',
+  },
+  {
+    name: 'B1',
+    color: '#193a27',
+    interval: 1,
+    src: 'aNotes/B1.wav',
+  },
+  {
+    name: 'Db1',
+    color: '#234431',
+    interval: 2,
+    src: 'aNotes/Db1.wav',
+  },
+  {
+    name: 'D1',
+    color: '#2d4e3b',
+    interval: 3,
+    src: 'aNotes/D1.wav',
+  },
+  {
+    name: 'E1',
+    color: '#385946',
+    interval: 4,
+    src: 'aNotes/E1.wav',
+  },
+  {
+    name: 'Gb1',
+    color: '#426350',
+    interval: 5,
+    src: 'aNotes/Gb1.wav',
+  },
+  {
+    name: 'Ab1',
+    color: '#4c6d5a',
+    interval: 6,
+    src: 'aNotes/Ab1.wav',
+  },
+  {
+    name: 'A2',
+    color: '#567763',
+    interval: 7,
+    src: 'aNotes/A2.wav',
+  },
+  {
+    name: 'B2',
+    color: '#5f806c',
+    interval: 8,
+    src: 'aNotes/B2.wav',
+  },
+  {
+    name: 'Db2',
+    color: '#698a76',
+    interval: 9,
+    src: 'aNotes/Db2.wav',
+  },
+  {
+    name: 'D2',
+    color: '#749581',
+    interval: 10,
+    src: 'aNotes/D2.wav',
+  },
+  {
+    name: 'E2',
+    color: '#7f9f8c',
+    interval: 11,
+    src: 'aNotes/E2.wav',
+  },
+  {
+    name: 'Gb2',
+    color: '#89a996',
+    interval: 12,
+    src: 'aNotes/Gb2.wav',
+  },
+  {
+    name: 'Ab2',
+    color: '#92b39f',
+    interval: 13,
+    src: 'aNotes/Ab2.wav',
+  },
+  {
+    name: 'A3',
+    color: '#9ebeab',
+    interval: 14,
+    src: 'aNotes/A3.wav',
+  },
+  {
+    name: 'B3',
+    color: '#a8c8b5',
+    interval: 15,
+    src: 'aNotes/B3.wav',
+  },
+  {
+    name: 'Db3',
+    color: '#b2d2bf',
+    interval: 16,
+    src: 'aNotes/Db3.wav',
+  },
+  {
+    name: 'D3',
+    color: '#bbdbc8',
+    interval: 17,
+    src: 'aNotes/D3.wav',
+  },
+  {
+    name: 'E3',
+    color: '#c7e7d4',
+    interval: 18,
+    src: 'aNotes/E3.wav',
+  },
+  {
+    name: 'Gb3',
+    color: '#d0f0dd',
+    interval: 19,
+    src: 'aNotes/Gb3.wav',
+  },
+  {
+    name: 'Ab3',
+    color: '#dafae7',
+    interval: 20,
+    src: 'aNotes/Ab3.wav',
+  },
+];
 
+let noteSet;
+
+const KEY_NUMS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
+
+loadKeys = function (root) {
+  if (root === 'F') noteSet = F;
+  if (root === 'A') noteSet = A;
+  KEY_NUMS.forEach(keyNum => {
+    const key = document.getElementById(keyNum);
+    key.onclick = handleNoteClick;
+    const keyData = noteSet[keyNum - 1];
+    console.log('le key ', key.childNodes);
+    const source = document.getElementById('source-' + keyNum);
+    source.src = keyData.src;
+    document.getElementById('key' + keyNum).load();
+    document.getElementById('name-' + keyNum).innerHTML = keyData.name;
+    // key.childNodes.forEach(node => {
+    //   if (node.localName === 'audio') {
+    //     console.log('audio!')
+    //     console.log(node)
+    //   }
+    // });
+    //key.innerHTML = F[keyNum - 1]
+  });
 };
 
 const KEYS_PLAYING = [];
@@ -149,18 +300,18 @@ handleCircleLeave = function () {
 
 handleKeyPlay = function (keyNum) {
   const keyBox = document.createElement('div');
-  const currentInterval = F[keyNum - 1].interval;
+  const currentInterval = noteSet[keyNum - 1].interval;
   const percentage = keyNum * 6;
   KEYS_PLAYING.push(true);
 
   const noteName = document.createElement('div');
   noteName.className = 'circle-note-name';
   noteName.id = 'note-name' + keyNum;
-  noteName.innerHTML = F[keyNum - 1].name;
+  noteName.innerHTML = noteSet[keyNum - 1].name;
 
   keyBox.dataset.interval = currentInterval;
   keyBox.appendChild(noteName);
-  keyBox.style.background = F[keyNum - 1].color;
+  keyBox.style.background = noteSet[keyNum - 1].color;
   keyBox.style.width = (100 - percentage) + '%';
   keyBox.style.height = (100 - percentage) + '%';
   keyBox.style.top = (percentage / 2) + '%';
@@ -238,31 +389,29 @@ const handleNoteClick = function () {
   }
 };
 
-const KEY_NUMS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
-
-
 document.addEventListener("DOMContentLoaded", function(event) { 
   //do work
   document.getElementById('info-circle').onmouseenter = handleCircleHover;
   document.getElementById('info-circle').onmouseleave = handleCircleLeave;
 
-  KEY_NUMS.forEach(keyNum => {
-    const key = document.getElementById(keyNum);
-    key.onclick = handleNoteClick;
-    const keyData = F[keyNum - 1];
-    console.log('le key ', key.childNodes);
-    const source = document.getElementById('source-' + keyNum);
-    source.src = keyData.src;
-    document.getElementById('key' + keyNum).load();
-    document.getElementById('name-' + keyNum).innerHTML = keyData.name;
-    // key.childNodes.forEach(node => {
-    //   if (node.localName === 'audio') {
-    //     console.log('audio!')
-    //     console.log(node)
-    //   }
-    // });
-    //key.innerHTML = F[keyNum - 1]
-  });
+  loadKeys('A');
+  // KEY_NUMS.forEach(keyNum => {
+  //   const key = document.getElementById(keyNum);
+  //   key.onclick = handleNoteClick;
+  //   const keyData = F[keyNum - 1];
+  //   console.log('le key ', key.childNodes);
+  //   const source = document.getElementById('source-' + keyNum);
+  //   source.src = keyData.src;
+  //   document.getElementById('key' + keyNum).load();
+  //   document.getElementById('name-' + keyNum).innerHTML = keyData.name;
+  //   // key.childNodes.forEach(node => {
+  //   //   if (node.localName === 'audio') {
+  //   //     console.log('audio!')
+  //   //     console.log(node)
+  //   //   }
+  //   // });
+  //   //key.innerHTML = F[keyNum - 1]
+  // });
   // document.getElementById('1').onclick = handleNoteClick;
 
   // document.getElementById('2').onclick = function () {
