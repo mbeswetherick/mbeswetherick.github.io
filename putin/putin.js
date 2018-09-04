@@ -43,6 +43,12 @@ const handleQuestionClickBolton = function () {
     this.style.background = 'gold';
     document.getElementById('mask').style.opacity = '0';
     document.getElementById('audio-correct').play();
+    document.getElementById('correct-0').classList.toggle('showing');
+
+    const leQuestion = document.getElementById('question-0');
+    leQuestion.classList.toggle('hide');
+    leQuestion.dataset.correct = 'yes';
+
   } else {
     this.style.background = 'pink';
     this.childNodes[1].style.textDecoration = 'line-through';
@@ -56,6 +62,11 @@ const handleQuestionClickXi = function () {
     this.style.background = 'gold';
     document.getElementById('mask').style.opacity = '0';
     document.getElementById('audio-correct').play();
+
+    document.getElementById('correct-1').classList.toggle('showing');
+    const leQuestion = document.getElementById('question-1');
+    leQuestion.classList.toggle('hide');
+    leQuestion.dataset.correct = 'yes';
   } else {
     this.style.background = 'pink';
     this.childNodes[1].style.textDecoration = 'line-through';
@@ -103,7 +114,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.intersectionRatio > 0) {
-        document.getElementById('mask').style.opacity = '1';
+        // only if we are wrong do we want the mask to block out the answer
+        const leMask = document.getElementById('mask');
+        const questionWrapper = document.getElementById('question-' + entry.target.id);
+        console.log('correct?', questionWrapper)
+        if (questionWrapper && questionWrapper.dataset.correct == 'yes') {
+          leMask.style.opacity = '0';
+        } else {
+          leMask.style.opacity = '1';
+        }
         const slide = PHOTOS[parseInt(entry.target.id, 10)];
         const textDom = document.getElementById(entry.target.id);
         console.log('in the view', entry);

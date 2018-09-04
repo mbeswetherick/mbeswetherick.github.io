@@ -94,8 +94,12 @@ h1 {
   opacity: 1;
 }
 
+.question.hide {
+  opacity: 0;
+}
+
 .question {
-  margin-bottom: 110vh;
+  margin-bottom: 30px;
   padding: 0;
   height: 400px;
   width: 80%;
@@ -104,6 +108,30 @@ h1 {
   margin-right: auto;
   display: flex;
   flex-direction: column;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.question.hide {
+  opacity: 0;
+}
+
+.correct {
+  font-family: 'Libre Franklin';
+  margin-bottom: 110vh;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  line-height: 28px;
+  width: 300px;
+  font-size: 17px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.correct.showing {
+  opacity: 1;
 }
 
 .question p {
