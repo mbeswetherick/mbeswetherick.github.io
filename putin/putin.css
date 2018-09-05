@@ -175,8 +175,11 @@ h1 {
   margin-right: auto;
   line-height: 33pt;
   text-align: left;
-  font-family: 'Libre Baskerville', serif;
+  /*font-family: 'Libre Baskerville', serif; */
+  font-family: 'Libre Franklin';
   font-size: 18pt;
+  color: white;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
 }
 
 .question-possibility {

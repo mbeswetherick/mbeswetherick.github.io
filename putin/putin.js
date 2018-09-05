@@ -80,6 +80,11 @@ const handleQuestionClickTrump = function () {
     this.style.background = 'gold';
     document.getElementById('mask').style.opacity = '0';
     document.getElementById('audio-correct').play();
+
+    document.getElementById('correct-2').classList.toggle('showing');
+    const leQuestion = document.getElementById('question-2');
+    leQuestion.classList.toggle('hide');
+    leQuestion.dataset.correct = 'yes';
   } else {
     this.style.background = 'pink';
     this.childNodes[1].style.textDecoration = 'line-through';
