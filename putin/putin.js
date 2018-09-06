@@ -167,6 +167,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     observer.observe(image);
   });
 
+  titleObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > 0) {
+        //alert('title in view');
+        document.getElementById('mask').style.opacity = '1';
+      }
+    });
+  });
+
+  titleObserver.observe(document.getElementById('lede-holder'));
+
   setupQuiz();
 
 });
