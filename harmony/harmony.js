@@ -586,6 +586,22 @@ handleCircleLeave = function () {
 handleKeyPlay = function (keyNum) {
   const keyBox = document.createElement('div');
   const currentInterval = noteSet[keyNum - 1].interval;
+  const key = document.getElementById(`key${keyNum}`);
+  const keyWrapper = document.getElementById(keyNum);
+
+  key.play();
+
+  // remove all for there is a new note being played
+  //document.getElementById(`key-${keyNum}`);
+  const notes = document.querySelectorAll('.last-note-played');
+  notes.forEach(note => {
+    //console.log('note id', note.id, 'keyNum')
+    note.classList.toggle('last-note-played');
+  })
+
+  keyWrapper.classList.add('playing');
+  keyWrapper.classList.toggle('last-note-played');
+
   KEYS_PLAYING.push(true);
   const percentage = KEYS_PLAYING.length * 13;
 
@@ -659,13 +675,56 @@ handleKeyPause = function (keyNum) {
   }, 100);
 };
 
+const moveNoteUpByOne = function () {
+  // It's really only one note
+  const notes = document.querySelectorAll('.last-note-played');
+  notes.forEach(note => {
+    console.log('what is the note', note.id)
+    handleKeyPlay(parseInt(note.id, 10) + 1);
+    handleKeyPause(parseInt(note.id, 10));
+  })
+  
+}
+
+function playKeyPromiseWrapper(note) {
+  return new Promise(function(resolve, reject) {
+    // let script = document.createElement('script');
+    // script.src = src;
+
+    // script.onload = () => resolve(script);
+    // script.onerror = () => reject(new Error("Script load error: " + src));
+
+    // document.head.append(script);
+    handleKeyPlay(note);
+  });
+}
+
+// function delay(ms) {
+//   return new Promise(resolve => setTimeout(resolve, ms));
+// }
+
+
+const moveNoteDownByOne = function () {
+  // It's really only one note
+  const notes = document.querySelectorAll('.last-note-played');
+  notes.forEach(note => {
+    console.log('what is the note', note.id)
+    //playKeyPromiseWrapper(parseInt(note.id, 10));
+    handleKeyPlay(parseInt(note.id, 10) - 1);
+    //delay(25).then(() => handleKeyPause(parseInt(note.id, 10)));
+    handleKeyPause(parseInt(note.id, 10))
+    // handleKeyPause(parseInt(note.id, 10));
+  })
+  
+}
+
 const handleNoteClick = function () {
   const keyNumber = this.id;
   const key = document.getElementById(`key${keyNumber}`);
   const keyWrapper = document.getElementById(keyNumber);
   if (key.paused) {
-    key.play();
-    keyWrapper.classList.add('playing');
+    //  key.play();
+    //  keyWrapper.classList.add('playing');
     handleKeyPlay(keyNumber);
   } else {
     //  key.pause();
@@ -713,6 +772,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
   dragElement(document.getElementById("info-circle"));
   //  document.getElementById('key-changer').onclick = changeKey;
   document.onkeypress = function(e) {
+    console.log('e keycode', e.keyCode)
+    if (KEYS_PLAYING.length && e.keyCode === 46) {
+      moveNoteUpByOne();
+    }
+    if (KEYS_PLAYING.length && e.keyCode === 44) {
+      moveNoteDownByOne();
+    }
+
     changeKey(String.fromCharCode(e.keyCode));
     // e = e || window.event;
     // var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
