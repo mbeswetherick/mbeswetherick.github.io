@@ -602,7 +602,8 @@ handleKeyPlay = function (keyNum) {
   keyWrapper.classList.add('playing');
   keyWrapper.classList.toggle('last-note-played');
 
-  KEYS_PLAYING.push(true);
+  KEYS_PLAYING.push(noteSet[keyNum - 1].name);
+  console.log('keys playing', KEYS_PLAYING)
   const percentage = KEYS_PLAYING.length * 13;
 
   const noteName = document.createElement('div');
@@ -680,8 +681,8 @@ const moveNoteUpByOne = function () {
   const notes = document.querySelectorAll('.last-note-played');
   notes.forEach(note => {
     console.log('what is the note', note.id)
-    handleKeyPlay(parseInt(note.id, 10) + 1);
     handleKeyPause(parseInt(note.id, 10));
+    handleKeyPlay(parseInt(note.id, 10) + 1);
   })
   
 }
@@ -710,9 +711,10 @@ const moveNoteDownByOne = function () {
   notes.forEach(note => {
     console.log('what is the note', note.id)
     //playKeyPromiseWrapper(parseInt(note.id, 10));
+    handleKeyPause(parseInt(note.id, 10))
+
     handleKeyPlay(parseInt(note.id, 10) - 1);
     //delay(25).then(() => handleKeyPause(parseInt(note.id, 10)));
-    handleKeyPause(parseInt(note.id, 10))
     // handleKeyPause(parseInt(note.id, 10));
   })
   
