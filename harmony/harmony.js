@@ -679,10 +679,12 @@ handleKeyPause = function (keyNum) {
 const moveNoteUpByOne = function () {
   // It's really only one note
   const notes = document.querySelectorAll('.last-note-played');
+  const intervalChange = getNextInterval() ? getNextInterval() - 1 : 1;
   notes.forEach(note => {
     console.log('what is the note', note.id)
+    console.log('the damn keymap', keyMap)
     handleKeyPause(parseInt(note.id, 10));
-    handleKeyPlay(parseInt(note.id, 10) + 1);
+    handleKeyPlay(parseInt(note.id, 10) + intervalChange);
   })
   
 }
@@ -708,17 +710,46 @@ function playKeyPromiseWrapper(note) {
 const moveNoteDownByOne = function () {
   // It's really only one note
   const notes = document.querySelectorAll('.last-note-played');
+  const intervalChange = getNextInterval() ? getNextInterval() - 1 : 1;
   notes.forEach(note => {
     console.log('what is the note', note.id)
     //playKeyPromiseWrapper(parseInt(note.id, 10));
     handleKeyPause(parseInt(note.id, 10))
 
-    handleKeyPlay(parseInt(note.id, 10) - 1);
+    handleKeyPlay(parseInt(note.id, 10) - intervalChange);
     //delay(25).then(() => handleKeyPause(parseInt(note.id, 10)));
     // handleKeyPause(parseInt(note.id, 10));
   })
   
 }
+
+const getNextInterval = function () {
+  if (keyMap[50]) {
+    return 2;
+  }
+  if (keyMap[51]) {
+    return 3;
+  }
+  if (keyMap[52]) {
+    return 4;
+  }
+  if (keyMap[53]) {
+    return 5;
+  }
+  if (keyMap[54]) {
+    return 6;
+  }
+  if (keyMap[55]) {
+    return 7;
+  }
+  if (keyMap[56]) {
+    return 8;
+  }
+  if (keyMap[57]) {
+    return 9;
+  }
+  return 0;
+};
 
 const handleNoteClick = function () {
   const keyNumber = this.id;
@@ -734,6 +765,14 @@ const handleNoteClick = function () {
     handleKeyPause(keyNumber);
   }
 };
+
+var keyMap = {}; // You could also use an array
+  onkeydown = onkeyup = function(e){
+      e = e || event; // to deal with IE
+      keyMap[e.keyCode] = e.type == 'keydown';
+      /* insert conditional here */
+  }
+
 
 document.addEventListener("DOMContentLoaded", function(event) { 
   //do work
@@ -776,6 +815,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   document.onkeypress = function(e) {
     console.log('e keycode', e.keyCode)
     if (KEYS_PLAYING.length && e.keyCode === 46) {
+      //console.log('the map', keyMap)
       moveNoteUpByOne();
     }
     if (KEYS_PLAYING.length && e.keyCode === 44) {
