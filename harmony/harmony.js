@@ -604,8 +604,9 @@ handleKeyPlay = function (keyNum) {
   keyWrapper.classList.toggle('last-note-played');
 
   KEYS_PLAYING.push(noteSet[keyNum - 1].name);
-  console.log('keys playing', KEYS_PLAYING)
+  //console.log('keys playing', KEYS_PLAYING)
   const percentage = KEYS_PLAYING.length * PERCENTAGE_VALUE;
+  console.log('keys playing length', KEYS_PLAYING.length)
 
   const noteName = document.createElement('div');
   noteName.className = 'circle-note-name';
@@ -628,11 +629,12 @@ handleKeyPlay = function (keyNum) {
   const noteHolder = document.getElementById('note-holder');
 
   document.getElementById('info-holder').style.opacity = '0';
+  console.log('what is the damn key box', keyBox, 'and the color', noteSet[keyNum - 1].color, 'and the note holder', noteHolder)
 
   //parentElement.insertBefore(newElement, parentElement.children[2]);
   let indexToAppend = 0;
   if (noteHolder.children.length) {
-    console.log('trying to append at correct spot')
+    //console.log('trying to append at correct spot')
     for (let i = 0; i < noteHolder.children.length; i += 1) {
       if (parseInt(noteHolder.children[i].dataset.interval, 10) >= currentInterval) {
         indexToAppend = i;
@@ -644,7 +646,7 @@ handleKeyPlay = function (keyNum) {
       noteHolder.insertBefore(keyBox, noteHolder.children[indexToAppend]);
     }
   } else {
-    console.log('just appending bro')
+    //console.log('just appending bro')
     document.getElementById('note-holder').appendChild(keyBox);
   }
   
@@ -652,6 +654,7 @@ handleKeyPlay = function (keyNum) {
 
 
   window.setTimeout(function() {
+    console.log('whats up we fadin')
     keyBox.style.opacity = '0.8';
   }, 100)
   //keyBox.style.opacity = '1';
@@ -691,10 +694,10 @@ handleKeyPause = function (keyNum) {
 
   window.setTimeout(function() {
     const parent = keyBox.parentNode;
-    console.log('how many kids ', parent.childNodes.length)
+    //console.log('how many kids ', parent.childNodes.length)
     parent.removeChild(keyBox);
-    console.log('the parents kids', parent.children)
-    console.log('and after ', parent.childNodes.length)
+    //console.log('the parents kids', parent.children)
+    //console.log('and after ', parent.childNodes.length)
     if (parent.childNodes) {
       rewriteCircleNotes(parent, parent.cloneNode(true));
     }
@@ -709,7 +712,6 @@ rewriteCircleNotes = function (parent, parentClone) {
     parent.removeChild(parent.firstChild);
   }
   const children = [...parentClone.children];
-  console.log(typeof children)
   children.forEach((child, index) => {
     let interval = parseInt(child.dataset.interval, 10) + 1
     let percentage = (index + 1) * PERCENTAGE_VALUE;
@@ -717,12 +719,12 @@ rewriteCircleNotes = function (parent, parentClone) {
     child.style.height = (100 - percentage) + '%';
     child.style.top = (percentage / 2) + '%';
     child.style.left = (percentage / 2) + '%';
+    child.style.opacity = '0.8';
     child.id = 'note-box' + interval;
     parent.appendChild(child);
     child.onclick = function () {
       handleKeyPause(interval)
     };
-    console.log('the parents now', parent)
   })
 };
 
@@ -731,8 +733,8 @@ const moveNoteUpByOne = function () {
   const notes = document.querySelectorAll('.last-note-played');
   const intervalChange = getNextInterval() ? getNextInterval() - 1 : 1;
   notes.forEach(note => {
-    console.log('what is the note', note.id)
-    console.log('the damn keymap', keyMap)
+    //console.log('what is the note', note.id)
+    //console.log('the damn keymap', keyMap)
     handleKeyPause(parseInt(note.id, 10));
     handleKeyPlay(parseInt(note.id, 10) + intervalChange);
   })
@@ -762,7 +764,7 @@ const moveNoteDownByOne = function () {
   const notes = document.querySelectorAll('.last-note-played');
   const intervalChange = getNextInterval() ? getNextInterval() - 1 : 1;
   notes.forEach(note => {
-    console.log('what is the note', note.id)
+    //console.log('what is the note', note.id)
     //playKeyPromiseWrapper(parseInt(note.id, 10));
     handleKeyPause(parseInt(note.id, 10))
 
@@ -863,7 +865,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   dragElement(document.getElementById("info-circle"));
   //  document.getElementById('key-changer').onclick = changeKey;
   document.onkeypress = function(e) {
-    console.log('e keycode', e.keyCode)
     if (KEYS_PLAYING.length && e.keyCode === 46) {
       //console.log('the map', keyMap)
       moveNoteUpByOne();
