@@ -517,6 +517,7 @@ const C = [
 
 let noteSet;
 let currentKey;
+const PERCENTAGE_VALUE = 13;
 
 const KEY_NUMS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
 
@@ -604,7 +605,7 @@ handleKeyPlay = function (keyNum) {
 
   KEYS_PLAYING.push(noteSet[keyNum - 1].name);
   console.log('keys playing', KEYS_PLAYING)
-  const percentage = KEYS_PLAYING.length * 13;
+  const percentage = KEYS_PLAYING.length * PERCENTAGE_VALUE;
 
   const noteName = document.createElement('div');
   noteName.className = 'circle-note-name';
@@ -656,7 +657,30 @@ handleKeyPlay = function (keyNum) {
   //keyBox.style.opacity = '1';
 };
 
+// handleKeyPause = function (keyNum) {
+//   const key = document.getElementById(`key${keyNum}`);
+//   key.pause();
+//   const keyWrapper = document.getElementById(keyNum);
+//   keyWrapper.classList.remove('playing');
+//   const keyBox = document.getElementById('note-box' + keyNum);
+//   keyBox.style.opacity = 0;
+//   KEYS_PLAYING.pop();
+
+//   window.setTimeout(function() {
+//     const parent = keyBox.parentNode;
+//     console.log('how many kids ', parent.childNodes.length)
+//     parent.removeChild(keyBox);
+//     console.log('and after ', parent.childNodes.length)
+//     if (parent.childNodes.length === 0) {
+//       document.getElementById('info-holder').style.opacity = '1';
+//     }
+//   }, 100);
+// };
+
 handleKeyPause = function (keyNum) {
+  //console.log('note holder', document.getElementById('note-holder').children)
+
+
   const key = document.getElementById(`key${keyNum}`);
   key.pause();
   const keyWrapper = document.getElementById(keyNum);
@@ -669,11 +693,37 @@ handleKeyPause = function (keyNum) {
     const parent = keyBox.parentNode;
     console.log('how many kids ', parent.childNodes.length)
     parent.removeChild(keyBox);
+    console.log('the parents kids', parent.children)
     console.log('and after ', parent.childNodes.length)
+    if (parent.childNodes) {
+      rewriteCircleNotes(parent, parent.cloneNode(true));
+    }
     if (parent.childNodes.length === 0) {
       document.getElementById('info-holder').style.opacity = '1';
     }
   }, 100);
+};
+
+rewriteCircleNotes = function (parent, parentClone) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+  const children = [...parentClone.children];
+  console.log(typeof children)
+  children.forEach((child, index) => {
+    let interval = parseInt(child.dataset.interval, 10) + 1
+    let percentage = (index + 1) * PERCENTAGE_VALUE;
+    child.style.width = (100 - percentage) + '%';
+    child.style.height = (100 - percentage) + '%';
+    child.style.top = (percentage / 2) + '%';
+    child.style.left = (percentage / 2) + '%';
+    child.id = 'note-box' + interval;
+    parent.appendChild(child);
+    child.onclick = function () {
+      handleKeyPause(interval)
+    };
+    console.log('the parents now', parent)
+  })
 };
 
 const moveNoteUpByOne = function () {
