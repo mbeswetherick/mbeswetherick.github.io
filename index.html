@@ -35,6 +35,12 @@
         padding-bottom: 5px;
       }
 
+      .work-item img {
+          width: 100%;
+          position: absolute;
+          object-fit: cover;
+        }
+
       ::selection {
         background: #b3c4ca;
       }
@@ -130,7 +136,7 @@
         align-items: center;
         -webkit-align-items: center;
         justify-content: center;
-        background-color: black;
+       /* background-color: black; */
         border-radius: 50%;
         margin-left: auto;
         margin-right: auto;
@@ -168,7 +174,8 @@
       .work-item-meta.bike:hover .bike-description,
       .work-item-meta.kexp:hover .kexp-description,
       .work-item-meta.posters:hover .posters-description {
-        border-bottom: 0.5px black solid;
+        /*border-bottom: 0.5px black solid; */
+        text-decoration: underline;
       }
 
       .work-item-meta.wedep p,
@@ -223,6 +230,12 @@
           padding-bottom: 10px;
         }
 
+        h3 {
+          font-family: 'Assistant', sans-serif;
+          font-weight: 700;
+          font-size: 12pt;
+        }
+
         .work-item-meta {
           padding-top: 90px;
           padding-bottom: 90px;
@@ -251,6 +264,7 @@
           font-weight: 100;
           padding-right: 45px;
           padding-left: 0;
+          width: 40%;
           font-size: 17pt;
         }
 
@@ -259,16 +273,24 @@
           font-weight: 100;
           padding-right: 15px;
           /*font-size: 17pt;
-          line-height: 26pt;*/
+          line-height: 26pt;
           font-size: 31px;
-          line-height: 46px;
-          max-width: 845px;
+          line-height: 46px;*/
+          font-size: 19px;
+          line-height: 36px;
+          /*
+          max-width: 845px; 
+          max-width: 50%;*/
           margin-bottom: 0;
         }
 
         .work-item {
-          height: 235px;
-          width: 235px;
+          /*
+          height: 250px;
+          width: 250px;
+          */
+          width: 60%;
+          overflow: hidden;
           display: flex;
           display: -webkit-box;
           display:-webkit-flex;
@@ -277,11 +299,18 @@
           -webkit-align-items: center;
           justify-content:center;
           background-color: black;
-          border-radius: 50%;
+          border-radius: 5px;
           margin-left: auto;
           margin-right: 0;
           margin-top: auto;
           margin-bottom: auto;
+          position: relative;
+        }
+
+        .work-item img {
+          width: 160%;
+          position: absolute;
+          object-fit: cover;
         }
 
         .work-item h2 {
@@ -289,6 +318,8 @@
           font-size: 24.4pt;
           margin-left: auto;
           margin-right: auto;
+          z-index: 2;
+          color: white;
         }
 
         .work-item.bike h2 {
@@ -296,7 +327,7 @@
         }
 
         .work-item.bike {
-          border-radius: 0;
+          border-radius: 5px;
         }
 
         .myLinks{
@@ -306,7 +337,7 @@
         .work-item-meta.wedep:hover .wedep-description,
         .work-item-meta.bike:hover .bike-description,
         .work-item-meta.kexp:hover .kexp-description {
-          border-bottom: 0.5px black solid;
+          /*border-bottom: 0.5px black solid;*/
         }
 
 
@@ -351,7 +382,6 @@
       I most enjoy collaborating as well as desiging and building out a project or tool from scratch.</p>
 
       <div class='work-item-meta wedep'>
-
         <a href='harmony/index.html' target="_blank">
           <div class='work-item-description'>
               <h2 class='wedep-description'>Harmony is a simplified digital instrument. The only possible notes one can play are diatonic - meaning, you can't play anything that sounds "bad" or "wrong." You can use it to help you figure out chords/harmonies. I think it's interesting to make a chord and then toggle notes on and off to see how they affect the overall sound</h2>
@@ -359,6 +389,7 @@
 
           <div class='work-item'>
             <h2>Harmony</h2>
+            <img src='movies/harmWhole.png'/>
           </div>
         </a>
 
@@ -373,6 +404,7 @@
 
           <div class='work-item bike'>
             <h2>Putin</h2>
+            <img src='movies/putin.jpg'/>
           </div>
         </a>
 
@@ -389,6 +421,7 @@
 
           <div class='work-item'>
             <h2>wedep</h2>
+            <img src='movies/wedep.png'/>
           </div>
         </a>
 
@@ -403,6 +436,7 @@
 
           <div class='work-item bike'>
             <h2>Gidget</h2>
+            <img src='movies/gidget.png'/>
           </div>
         </a>
 
