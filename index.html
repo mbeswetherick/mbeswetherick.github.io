@@ -37,8 +37,6 @@
 
       .work-item img {
           width: 100%;
-          position: absolute;
-          object-fit: cover;
         }
 
       ::selection {
@@ -209,6 +207,7 @@
         .hello {
           font-size: 31px;
           line-height: 46px;
+          margin-bottom: 90px;
         }
 
         .art {
@@ -254,6 +253,10 @@
           padding-top: 45px;
         }
 
+        .work-item-meta:first-of-type {
+          border-top: 0.5px solid #888;
+        }
+
         .work-item-description {
           flex-direction: column;
           /*width: 53%;*/
@@ -282,6 +285,24 @@
           max-width: 845px; 
           max-width: 50%;*/
           margin-bottom: 0;
+          margin-top: 10px;
+        }
+
+        .work-item-description h3 {
+          font-family: 'Assistant', 'helvetica', arial;
+          font-weight: 400;
+          padding-right: 15px;
+          /*font-size: 17pt;
+          line-height: 26pt;
+          font-size: 31px;
+          line-height: 46px;*/
+          font-size: 31px;
+          line-height: 46px;
+          /*
+          max-width: 845px; 
+          max-width: 50%;*/
+          margin-bottom: 0;
+          margin-top: 0;
         }
 
         .work-item {
@@ -290,6 +311,7 @@
           width: 250px;
           */
           width: 60%;
+          height: 100%;
           overflow: hidden;
           display: flex;
           display: -webkit-box;
@@ -298,7 +320,6 @@
           align-items: center;
           -webkit-align-items: center;
           justify-content:center;
-          background-color: black;
           border-radius: 5px;
           margin-left: auto;
           margin-right: 0;
@@ -308,9 +329,7 @@
         }
 
         .work-item img {
-          width: 160%;
-          position: absolute;
-          object-fit: cover;
+          width: 100%;
         }
 
         .work-item h2 {
@@ -384,11 +403,11 @@
       <div class='work-item-meta wedep'>
         <a href='harmony/index.html' target="_blank">
           <div class='work-item-description'>
-              <h2 class='wedep-description'>Harmony is a simplified digital instrument. The only possible notes one can play are diatonic - meaning, you can't play anything that sounds "bad" or "wrong." You can use it to help you figure out chords/harmonies. I think it's interesting to make a chord and then toggle notes on and off to see how they affect the overall sound</h2>
+              <h3>Harmony</h3>
+              <h2 class='wedep-description'>Harmony is a simplified digital instrument. The only possible notes one can play are diatonic - meaning, you can't play anything that sounds "bad" or "wrong." You can use it to help you figure out chords/harmonies. I think it's interesting to make a chord and then toggle notes on and off to see how they affect the overall sound.</h2>
           </div>
 
           <div class='work-item'>
-            <h2>Harmony</h2>
             <img src='movies/harmWhole.png'/>
           </div>
         </a>
@@ -399,11 +418,11 @@
 
         <a href='putin/index.html' target="_blank">
           <div class='work-item-description bike'>
+              <h3>Who is shaking Putin's hand?</h3>
               <h2 class='bike-description'>A game I made in which you look at half of a photo of Vladimir Putin shaking someone's hand and then guess who is shaking said hand.</h2>
           </div>
 
           <div class='work-item bike'>
-            <h2>Putin</h2>
             <img src='movies/putin.jpg'/>
           </div>
         </a>
@@ -415,13 +434,13 @@
 
         <a href='http://wedep.co' target="_blank">
           <div class='work-item-description'>
+              <h3>Wedep</h3>
               <h2 class='wedep-description'>Wedep is a slang genome that works as a sort of Visual Urban Dictionary.</h2>
               <!-- <p><em>PRO TIP: Load on browse can be slow, but just wait a sec</em></p> -->
           </div>
 
           <div class='work-item'>
-            <h2>wedep</h2>
-            <img src='movies/wedep.png'/>
+            <img src='movies/wedep2.png'/>
           </div>
         </a>
 
@@ -431,11 +450,11 @@
 
         <a href='http://www.helpgidget.org/' target="_blank">
           <div class='work-item-description bike'>
+              <h3>Gidget</h3>
               <h2 class='bike-description'>Learning to program is kind of hard. Actually, it's really hard. This site aims to make it easier. People learn to write code by playing this fun video game I helped build in college.</h2>
           </div>
 
           <div class='work-item bike'>
-            <h2>Gidget</h2>
             <img src='movies/gidget.png'/>
           </div>
         </a>
@@ -446,11 +465,12 @@
 
         <a href='http://blog.kexp.org/author/mbeswetherick/' target="_blank">
           <div class='work-item-description kexp'>
-              <h2 class='kexp-description'>I used to work at Seattle's KEXP radio station. I would write down stuff for the DJs to say and sometimes they would say it. I also wrote for their blog. Here is everything I wrote for them.</h2>
+              <h3>KEXP</h3>
+              <h2 class='kexp-description'>I used to work at Seattle's KEXP radio station. I would write down stuff for the DJs to say and sometimes they would say it. I also reviewed shows for them and wrote for their blog. Here is everything I wrote for them.</h2>
           </div>
 
           <div class='work-item kexp'>
-            <h2>KEXP</h2>
+              <img src='movies/kexp.jpg'/>
           </div>
         </a>
 
@@ -460,6 +480,7 @@
 
         <a href='posters.html' target="_blank">
           <div class='work-item-description posters'>
+              <h3>Posters</h3>
               <h2 class='posters-description'>Here are some posters I have designed. I think they're fun, but you be the judge.</h2>
           </div>
 
@@ -474,11 +495,12 @@
 
         <a href='https://open.nytimes.com/headline-balancing-act-6e92d3d6119' target="_blank">
           <div class='work-item-description bike'>
+              <h3>Text Balancer</h3>
               <h2 class='bike-description'>I co-wrote this blog post on fixing typographic widows on the web for The New York Times. We open sourced the work, called it Text Balancer and now anyone can use it!</h2>
           </div>
 
           <div class='work-item bike'>
-            <h2 class='textBalancer'>Text Balancer</h2>
+              <img src='movies/times.png'/>
           </div>
         </a>
 
