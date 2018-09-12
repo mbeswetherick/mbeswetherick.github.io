@@ -80,7 +80,7 @@ body {
   position: fixed;
   cursor: move;
   top: 200px;
-  left: 60vw;
+  left: 35vw;
   display: flex;
   flex-direction: column;
 }
@@ -408,7 +408,6 @@ body {
 
 .circle-note-name.playing {
   opacity: 1;
-  margin-left: -200px;
 }
 
 
@@ -438,6 +437,10 @@ body {
     top: -8px;
     font-weight: 300;
     position: absolute;
+  }
+
+  .circle-note-name.playing {
+    margin-left: -200px;
   }
 
   .key-8, .key-15 {
