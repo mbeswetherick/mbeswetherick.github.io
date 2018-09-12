@@ -423,6 +423,10 @@ body {
     width: 14.285vw;
   }
 
+  .info-circle {
+    left: 59.75vw;
+  }
+
   .note-name {
     margin-left: auto;
   }
