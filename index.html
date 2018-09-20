@@ -29,10 +29,10 @@
         font-family: 'Assistant', 'helvetica neue', 'helvetica', arial;
         font-weight: 'bold';
         margin-bottom: 15px;
-        font-size: 34.5pt;
-        border-bottom: 15px solid black;
+        font-size: 26px;
+        border-bottom: 2px solid black;
         font-weight: 700;
-        line-height: 33pt;
+        line-height: 27px;
         padding-bottom: 5px;
       }
 
@@ -45,13 +45,14 @@
       }
 
       .hello {
-        margin-top: 30px;
+        margin-top: 12px;
         font-family: 'Assistant';
         font-size: 21px;
         line-height: 37px;
         max-width: 845px;
         font-size: 16px;
         line-height: 1.5em;
+        margin-bottom: 24px;
       }
 
       .work-item-description h3 {
@@ -115,8 +116,8 @@
       }
 
       .work-item-meta {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 24px;
+        padding-bottom: 24px;
         border-bottom: 0.5px solid #888;
         display: flex;
         display: -webkit-box;
@@ -166,6 +167,7 @@
       }
 
       .work-item-meta:first-of-type {
+        border-top: 2px solid black;
           border-top: 0.5px solid #888;
         }
 
@@ -220,18 +222,42 @@
       }
     }
 
+    @media (min-width : 620px) {
+      h1 {
+        font-size: 55px;
+        line-height: 50px;
+      }
+
+      .work-item-meta:first-of-type {
+        border-top: 0.5px solid #888;
+      }
+
+    }
+
     @media (min-width : 768px) {
       h1 {
-        margin-top: 50vh;
+        margin-top: 120px;
       }
 
       .hello {
         font-size: 21px;
+        margin-top: 31.5px;
+        margin-bottom: 31.5px;
       }
 
       .work-item-description h2 {
         font-size: 21px;
+        margin-top: 31.5px;
       }
+
+      .work-item-meta {
+        padding-top: 31.5px;
+        padding-bottom: 31.5px;
+        }
+
+        .work-item-description h3 {
+          font-size: 31px;
+        }
     }
 
 
@@ -252,7 +278,7 @@
         .hello {
           font-size: 31px;
           line-height: 46px;
-          margin-bottom: 90px;
+          margin-bottom: 96px;
         }
 
         .art {
@@ -272,6 +298,7 @@
           font-size: 60pt;
           line-height: 53pt;
           padding-bottom: 10px;
+          border-bottom: 15px solid black;
         }
 
         h3 {
@@ -281,8 +308,8 @@
         }
 
         .work-item-meta {
-          padding-top: 90px;
-          padding-bottom: 90px;
+          padding-top: 96px;
+          padding-bottom: 96px;
           border-bottom: 0.5px solid #888;
           display: flex;
           display: -webkit-box;
@@ -412,6 +439,7 @@
         h1 {
           font-size: 90pt;
           line-height: 80pt;
+          border-bottom: 15px solid black;
         }
       }
 
